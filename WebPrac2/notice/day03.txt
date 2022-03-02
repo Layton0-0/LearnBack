@@ -1,0 +1,55 @@
+1. context_root 이름을 바꾸어 보자.
+	(프로젝트 이름과 url에 있는 context를 다르게 주는 것)
+	확인: project_name / .settings/org.eclipse.wst.common.component
+
+	http://localhost:8787/myweb/TeacherTest
+	http://localhost:8787/WebPrac2/TeacherTest
+	
+2. WebPrac2을 http://localhost:8787/myweb으로 요청해서 url맵핑의 GET방식을 확인해보자.
+	
+	http://localhost:8787/myweb/ -> web.xml -> index.jsp(index_jsp.java -> TeacherTest.java) -> /myinsert로 이동한다.
+	
+	
+	- com.Test.TeacherTest 
+	- myweb/index.jsp
+	
+3. jsp -> servlet으로 url 매핑작업
+
+4. servlet 객체를 확인하자.
+
+	Servlet 인터페이스: 서블릿 프로그램이 반드시 구현해야 하는 메소드를 선언하고 있는 인터페이스
+						서블릿의 생명 주기를 가진다. 
+						init() 서블릿초기화 -> service() 클라이언트의 요청 처리 -> destroy() 서블릿 종료
+						
+	GenericServlet: Servlet 인터페이스를 상속을 받아 client/servlet환경에서 필요한 기능을 구현하는 추상클래스
+	
+	HttpServlet: GenericServlet를 상속받아서 HTTP 프로토콜에 맞는 동작을 수행하도록 구현된 클래스
+	
+	HttpServletRequest: 클라이언트가 서버에 요청할 때 생성되는 객체로 요청 정보를 포함하는 기능의 메소드로 멤버를 구성
+	
+	HttpServletResponse: 서버에 클라이언트가 응답할 때 생성되는 객체로 응답 정보를 포함하는 기능의 메소드로 멤버를 구성
+	
+5. com.test.Myscore.java: 하나의 서블릿에 각각의 url매핑에 따른 기능을 분리하는 연습을 하자.
+
+6. jsp정적페이지에서 (input.jsp)파일에서 폼데이터를 get방식, post방식으로 action을 servlet으로 맵핑해서 출력해보자.
+
+	action="/myweb/myres": input.jsp -> com.test.MyRes.java -> doget()
+	action="/myweb/myres" method="post": input.jsp -> com.test.MyRes.java -> doPost()
+	
+	
+7. com.test.MyServlet: 서블릿의 생명 주기를 확인하자.
+	init() 서블릿초기화 -> 데이터베이스 연결, 파일 오픈, 로그파일에 로딩된 서블릿 이름을 추가
+						ServletConfig 객체로 넘겨받은 초기값을 설정, 서블릿 요청 카운트(cnt)
+	service() 클라이언트의 요청 처리 -> 클라이언트가 path로 요청할 때마다 호출된다. (요청할 때마다 하나의 쓰레드를 생성한다.)
+	destroy() 서블릿 종료 -> 서블릿의 초기화에서 할당된 객체들을 명시 소멸한다. 서블릿이 재컴파일 될 때 호출된다.
+	
+	[.class -> jvm(heap) -> 메모리 할당 -> GC(Garbage Collector) 메모리 할당된 것을 자동 소거]
+										[ Young-memory / Old-memory ]
+
+	init: 서버가 가장 처음 실행될 때 단 한번만
+	service: 요청할 때마다 실행. service가 있으면 doGet을 호출하지 않는다.
+	destroy: 서버를 멈출 때에 한번 실행됨.
+	
+	
+	
+	
