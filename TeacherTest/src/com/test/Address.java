@@ -12,9 +12,26 @@ public class Address {
 	private String name;
 	private String addr;
 	private String tel;
+		
+	public Address() { // 명시된 기본 생성자 -> 멤버변수 초기화
+		super(); // this = 현재 오브젝트를 지칭하는 연산자
+		this.addr = null;
+		this.tel = null;
+	}
 	
 	
 	
+	
+	public Address(String name, String addr, String tel) {
+		super();
+		this.name = name;
+		this.addr = addr;
+		this.tel = tel;
+	}
+
+
+
+
 	public String getName() {
 		return name;
 	}

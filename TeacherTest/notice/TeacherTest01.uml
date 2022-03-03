@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_J7RrMJqWEeycFMQoSaFamg" name="TeacherTest01">
+    <eAnnotations xmi:id="_KDhBMJqWEeycFMQoSaFamg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_KDhBMZqWEeycFMQoSaFamg" source="codegen">
+        <details xmi:id="_KDhBMpqWEeycFMQoSaFamg" key="codegenDirectory" value="/TeacherTest/src"/>
+        <details xmi:id="_KJ6kIJqWEeycFMQoSaFamg" key="AssociatedSourceCode" value="/TeacherTest/src/com/test/Address.java;2266504632/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_KI-wAJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XEJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XEZqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XEpqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XE5qWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XFJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XFZqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_XFpqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_KI_-IJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_KI0X8JqWEeycFMQoSaFamg" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_KI4CUJqWEeycFMQoSaFamg" name="test">
+        <packagedElement xmi:type="uml:Class" xmi:id="_KI9h4JqWEeycFMQoSaFamg" name="Address">
+          <ownedAttribute xmi:id="_KJE2oJqWEeycFMQoSaFamg" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KJFdsJqWEeycFMQoSaFamg" name="addr">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_KJFdsZqWEeycFMQoSaFamg" name="tel">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KJGr0JqWEeycFMQoSaFamg" name="toString" specification="_KJAlMJqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_KJGr0ZqWEeycFMQoSaFamg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Address [name=&quot; + name + &quot;, addr=&quot; + addr + &quot;, tel=&quot; + tel + &quot;]&quot;;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_KJAlMJqWEeycFMQoSaFamg" name="toString" method="_KJGr0JqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_KJBMQJqWEeycFMQoSaFamg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_KDhoQJqWEeycFMQoSaFamg">
+      <eAnnotations xmi:id="_KDlSoJqWEeycFMQoSaFamg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_KDqLIJqWEeycFMQoSaFamg" base_Package="_J7RrMJqWEeycFMQoSaFamg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KJBzUJqWEeycFMQoSaFamg" base_Element="_KJAlMJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Annotations xmi:id="_KJDBcJqWEeycFMQoSaFamg" base_Element="_KJAlMJqWEeycFMQoSaFamg">
+    <annotations xmi:id="_KJDBcZqWEeycFMQoSaFamg" name="Override"/>
+  </UMLLabProfile:Annotations>
+</xmi:XMI>

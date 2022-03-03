@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_3tP_EJqWEeycFMQoSaFamg">
+  <modelElement href="WebPrac2.uml#_36g_AJqWEeycFMQoSaFamg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_4C6GAJqWEeycFMQoSaFamg" targetItem="_4DDP-pqWEeycFMQoSaFamg" sourceItem="_4C434JqWEeycFMQoSaFamg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_4C9JUZqWEeycFMQoSaFamg" targetItem="_4DDQAZqWEeycFMQoSaFamg" sourceItem="_4C9JUJqWEeycFMQoSaFamg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_4C-XcJqWEeycFMQoSaFamg" targetItem="_4DDQBZqWEeycFMQoSaFamg" sourceItem="_4C9wYJqWEeycFMQoSaFamg"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_4C--gZqWEeycFMQoSaFamg" targetItem="_4DDQDJqWEeycFMQoSaFamg" sourceItem="_4C--gJqWEeycFMQoSaFamg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_5WE-EJqWEeycFMQoSaFamg" sourceAnchor="225.0,0.0" targetAnchor="39.0,44.0" superClass="_5WGzQJqWEeycFMQoSaFamg" subClass="_4DDP8JqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_qkwpqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_5WGzRJqWEeycFMQoSaFamg" position="312.0,155.0"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_L7LQ8JqXEeycFMQoSaFamg" sourceAnchor="54.0,0.0" targetAnchor="2.0,28.0" enclosingItem="_L7ey8JqXEeycFMQoSaFamg" containedItem="_4DoewJqWEeycFMQoSaFamg">
+    <bendpoints xmi:id="_XuMMApqXEeycFMQoSaFamg" sourceY="-41" targetX="-970" targetY="-176"/>
+    <bendpoints xmi:id="_XuMMA5qXEeycFMQoSaFamg" sourceX="783" sourceY="-42" targetX="-187" targetY="-177"/>
+    <bendpoints xmi:id="_XuMMBJqXEeycFMQoSaFamg" sourceX="783" sourceY="135" targetX="-187"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_OsVJ8JqXEeycFMQoSaFamg" sourceAnchor="48.0,16.0" targetAnchor="47.0,56.0" enclosingItem="_L7ey8JqXEeycFMQoSaFamg" containedItem="_OsWYEJqXEeycFMQoSaFamg">
+    <bendpoints xmi:id="_XuMzEJqXEeycFMQoSaFamg" sourceY="-68" targetX="-85" targetY="51"/>
+    <bendpoints xmi:id="_XuMzEZqXEeycFMQoSaFamg" sourceX="85" sourceY="-68" targetY="51"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_OsW_IJqXEeycFMQoSaFamg" sourceAnchor="47.0,16.0" targetAnchor="47.0,56.0" enclosingItem="_L7ey8JqXEeycFMQoSaFamg" containedItem="_OsYNQJqXEeycFMQoSaFamg">
+    <bendpoints xmi:id="_XuMMBZqXEeycFMQoSaFamg" sourceY="-46" targetX="-288" targetY="51"/>
+    <bendpoints xmi:id="_XuMMBpqXEeycFMQoSaFamg" sourceX="288" sourceY="-46" targetY="51"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_OsXmMJqXEeycFMQoSaFamg" sourceAnchor="0.0,11.0" targetAnchor="2.0,29.0" enclosingItem="_OsYNQJqXEeycFMQoSaFamg" containedItem="_5WGzQJqWEeycFMQoSaFamg">
+    <bendpoints xmi:id="_XuMMAJqXEeycFMQoSaFamg" sourceX="-201" targetX="-522" targetY="-288"/>
+    <bendpoints xmi:id="_XuMMAZqXEeycFMQoSaFamg" sourceX="-202" sourceY="288" targetX="-523"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_Osds0JqXEeycFMQoSaFamg" sourceAnchor="38.0,0.0" targetAnchor="47.0,56.0" enclosingItem="_L7ey8JqXEeycFMQoSaFamg" containedItem="_OseT4JqXEeycFMQoSaFamg">
+    <bendpoints xmi:id="_XuMzEpqXEeycFMQoSaFamg" sourceY="-53" targetX="32" targetY="51"/>
+    <bendpoints xmi:id="_XuMzE5qXEeycFMQoSaFamg" sourceX="-32" sourceY="-53" targetY="51"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_Xpy0MJqXEeycFMQoSaFamg" sourceAnchor="32.0,0.0" targetAnchor="47.0,58.0" enclosingItem="_XpzbQJqXEeycFMQoSaFamg" containedItem="_L7ey8JqXEeycFMQoSaFamg"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_4C434JqWEeycFMQoSaFamg" sourceConnectionVisual="_4C6GAJqWEeycFMQoSaFamg" text="@see HttpServlet#HttpServlet()" item="_4DDP-pqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_zusZqWEeycFMQoSaFamg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_4C9JUJqWEeycFMQoSaFamg" sourceConnectionVisual="_4C9JUZqWEeycFMQoSaFamg" text="@see Servlet#destroy()" item="_4DDQAZqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_0VwZqWEeycFMQoSaFamg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_4C9wYJqWEeycFMQoSaFamg" sourceConnectionVisual="_4C-XcJqWEeycFMQoSaFamg" text="@see Servlet#init(ServletConfig)" item="_4DDQBZqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_0VwJqWEeycFMQoSaFamg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_4C--gJqWEeycFMQoSaFamg" sourceConnectionVisual="_4C--gZqWEeycFMQoSaFamg" text="@see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)" item="_4DDQDJqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_0VwpqWEeycFMQoSaFamg"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_5WGzQJqWEeycFMQoSaFamg" containment="_OsXmMJqXEeycFMQoSaFamg" name="HttpServlet" package="_OsYNQJqXEeycFMQoSaFamg" subclassedBy="_5WE-EJqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_GkEZqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_5WGzQZqWEeycFMQoSaFamg" position="273.0,133.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_5WGzQpqWEeycFMQoSaFamg" name="Reference">
+      <modelElement href="WebPrac2.uml#_3_HyMJqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <visibility xmi:id="_5WGzQ5qWEeycFMQoSaFamg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_4DtXQJqWEeycFMQoSaFamg" name="IOException">
+    <modelElement href="WebPrac2.uml#_3-694JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_4DtXQZqWEeycFMQoSaFamg" position="538.0,159.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_4DtXQpqWEeycFMQoSaFamg" name="Reference">
+      <modelElement href="WebPrac2.uml#_3--oQJqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <visibility xmi:id="_4DtXQ5qWEeycFMQoSaFamg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_4DDP8JqWEeycFMQoSaFamg" name="YourServlet" generalizations="_5WE-EJqWEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_36o60JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_4DDP8ZqWEeycFMQoSaFamg" position="87.0,232.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_4DDP8pqWEeycFMQoSaFamg" name="LegacyStyledElement">
+      <modelElement href="WebPrac2.uml#_36rXEJqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_4DDP85qWEeycFMQoSaFamg" name="Annotations">
+      <modelElement href="WebPrac2.uml#_363kUJqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <visibility xmi:id="_4DDP9JqWEeycFMQoSaFamg" label="+"/>
+    <attributes xmi:id="_4DDP9ZqWEeycFMQoSaFamg" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="WebPrac2.uml#_3_sZ8JqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_4DDP9pqWEeycFMQoSaFamg" name="StyledElement">
+        <modelElement href="WebPrac2.uml#_3_uPIJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDP95qWEeycFMQoSaFamg" label="-"/>
+      <cardinality xmi:id="_4DDP-JqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <type xmi:id="_4DDP-ZqWEeycFMQoSaFamg" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_4DDP-pqWEeycFMQoSaFamg" comments="_4C434JqWEeycFMQoSaFamg" targetConnectionVisual="_4C6GAJqWEeycFMQoSaFamg" name="YourServlet">
+      <modelElement href="WebPrac2.uml#_36vBcJqWEeycFMQoSaFamg"/>
+      <keywords xmi:id="_4DDP-5qWEeycFMQoSaFamg" keyword="create"/>
+      <stereotypes xmi:id="_4DDP_JqWEeycFMQoSaFamg" name="StyledElement">
+        <modelElement href="WebPrac2.uml#_36w2oJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDP_ZqWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_4DDP_pqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_4DDP_5qWEeycFMQoSaFamg">
+        <modelElement href="WebPrac2.uml#_36vogpqWEeycFMQoSaFamg"/>
+        <type xmi:id="_4DDQAJqWEeycFMQoSaFamg" name="YourServlet">
+          <modelElement href="WebPrac2.uml#_36o60JqWEeycFMQoSaFamg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_4DDQAZqWEeycFMQoSaFamg" comments="_4C9JUJqWEeycFMQoSaFamg" targetConnectionVisual="_4C9JUZqWEeycFMQoSaFamg" name="destroy">
+      <modelElement href="WebPrac2.uml#_36yEwJqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_4DDQApqWEeycFMQoSaFamg" name="StyledElement">
+        <modelElement href="WebPrac2.uml#_36yr0JqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDQA5qWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_4DDQBJqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_4DDQBZqWEeycFMQoSaFamg" comments="_4C9wYJqWEeycFMQoSaFamg" targetConnectionVisual="_4C-XcJqWEeycFMQoSaFamg" name="init">
+      <modelElement href="WebPrac2.uml#_3_floJqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_4DDQBpqWEeycFMQoSaFamg" name="StyledElement">
+        <modelElement href="WebPrac2.uml#_3_gzwJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDQB5qWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_4DDQCJqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_4DDQCZqWEeycFMQoSaFamg" name="config">
+        <modelElement href="WebPrac2.uml#_3_gMsJqWEeycFMQoSaFamg"/>
+        <cardinality xmi:id="_4DDQCpqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+        <type xmi:id="_4DDQC5qWEeycFMQoSaFamg" name="ServletConfig">
+          <modelElement href="WebPrac2.uml#_3_BrkJqWEeycFMQoSaFamg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_4DDQDJqWEeycFMQoSaFamg" comments="_4C--gJqWEeycFMQoSaFamg" targetConnectionVisual="_4C--gZqWEeycFMQoSaFamg" name="service">
+      <modelElement href="WebPrac2.uml#_3_keIJqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_4DDQDZqWEeycFMQoSaFamg" name="StyledElement">
+        <modelElement href="WebPrac2.uml#_3_mTUJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDQDpqWEeycFMQoSaFamg" label="#"/>
+      <cardinality xmi:id="_4DDQD5qWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_4DDQEJqWEeycFMQoSaFamg" name="request">
+        <modelElement href="WebPrac2.uml#_3_lFMJqWEeycFMQoSaFamg"/>
+        <cardinality xmi:id="_4DDQEZqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+        <type xmi:id="_4DDQEpqWEeycFMQoSaFamg" name="HttpServletRequest">
+          <modelElement href="WebPrac2.uml#_3_IZQJqWEeycFMQoSaFamg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_4DDQE5qWEeycFMQoSaFamg" name="response">
+        <modelElement href="WebPrac2.uml#_3_lFMZqWEeycFMQoSaFamg"/>
+        <cardinality xmi:id="_4DDQFJqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+        <type xmi:id="_4DDQFZqWEeycFMQoSaFamg" name="HttpServletResponse">
+          <modelElement href="WebPrac2.uml#_3_LckJqWEeycFMQoSaFamg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_4DDQFpqWEeycFMQoSaFamg" name="doGet">
+      <modelElement href="WebPrac2.uml#_3_oIgJqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_4DDQF5qWEeycFMQoSaFamg" name="Annotations">
+        <modelElement href="WebPrac2.uml#_3_qkwJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_4DDQGJqWEeycFMQoSaFamg" label="#"/>
+      <cardinality xmi:id="_4DDQGZqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_4DDQGpqWEeycFMQoSaFamg" name="req">
+        <modelElement href="WebPrac2.uml#_3_oIgZqWEeycFMQoSaFamg"/>
+        <cardinality xmi:id="_4DDQG5qWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+        <type xmi:id="_4DDQHJqWEeycFMQoSaFamg" name="HttpServletRequest">
+          <modelElement href="WebPrac2.uml#_3_IZQJqWEeycFMQoSaFamg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_4DDQHZqWEeycFMQoSaFamg" name="resp">
+        <modelElement href="WebPrac2.uml#_3_ovkJqWEeycFMQoSaFamg"/>
+        <cardinality xmi:id="_4DDQHpqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+        <type xmi:id="_4DDQH5qWEeycFMQoSaFamg" name="HttpServletResponse">
+          <modelElement href="WebPrac2.uml#_3_LckJqWEeycFMQoSaFamg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_4DoewJqWEeycFMQoSaFamg" containment="_L7LQ8JqXEeycFMQoSaFamg" name="ServletException" package="_L7ey8JqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_EH0JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_4DoewZqWEeycFMQoSaFamg" position="-142.0,159.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_4DoewpqWEeycFMQoSaFamg" name="Reference">
+      <modelElement href="WebPrac2.uml#_3_FV8JqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <visibility xmi:id="_4Doew5qWEeycFMQoSaFamg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_OsYNQJqXEeycFMQoSaFamg" containment="_OsW_IJqXEeycFMQoSaFamg" containments="_OsXmMJqXEeycFMQoSaFamg" classes="_5WGzQJqWEeycFMQoSaFamg" name="http" nestingPackage="_L7ey8JqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_36V_4JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_OsYNQZqXEeycFMQoSaFamg" position="592.0,403.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_OsWYEJqXEeycFMQoSaFamg" containment="_OsVJ8JqXEeycFMQoSaFamg" name="annotation" nestingPackage="_L7ey8JqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_36VY0JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_OsWYEZqXEeycFMQoSaFamg" position="794.0,425.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_OseT4JqXEeycFMQoSaFamg" containment="_Osds0JqXEeycFMQoSaFamg" name="ServletConfig" package="_L7ey8JqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_3_BrkJqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_OseT4ZqXEeycFMQoSaFamg" position="921.0,426.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_OseT4pqXEeycFMQoSaFamg" name="Reference">
+      <modelElement href="WebPrac2.uml#_3_DgwJqWEeycFMQoSaFamg"/>
+    </stereotypes>
+    <visibility xmi:id="_OseT45qXEeycFMQoSaFamg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_XpzbQJqXEeycFMQoSaFamg" containments="_Xpy0MJqXEeycFMQoSaFamg" name="javax" nestedPackages="_L7ey8JqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_36UxwJqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_XpzbQZqXEeycFMQoSaFamg" position="865.0,109.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_L7ey8JqXEeycFMQoSaFamg" containment="_Xpy0MJqXEeycFMQoSaFamg" containments="_L7LQ8JqXEeycFMQoSaFamg _OsVJ8JqXEeycFMQoSaFamg _OsW_IJqXEeycFMQoSaFamg _Osds0JqXEeycFMQoSaFamg" classes="_4DoewJqWEeycFMQoSaFamg _OseT4JqXEeycFMQoSaFamg" name="servlet" nestedPackages="_OsWYEJqXEeycFMQoSaFamg _OsYNQJqXEeycFMQoSaFamg" nestingPackage="_XpzbQJqXEeycFMQoSaFamg">
+    <modelElement href="WebPrac2.uml#_36UxwZqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_L7ey8ZqXEeycFMQoSaFamg" position="880.0,266.0" size="-1.0,-1.0"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

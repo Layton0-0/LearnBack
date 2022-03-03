@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_3pybYJqWEeycFMQoSaFamg" name="WebPrac2">
+    <eAnnotations xmi:id="_31LMAJqWEeycFMQoSaFamg" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_31LzEJqWEeycFMQoSaFamg" source="codegen">
+        <details xmi:id="_31LzEZqWEeycFMQoSaFamg" key="codegenDirectory" value="/WebPrac2/src/main/java"/>
+        <details xmi:id="_4Ca90JqWEeycFMQoSaFamg" key="AssociatedSourceCode" value="/WebPrac2/src/main/java/com/test/YourServlet.java;1466170782/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_36r-IJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_36r-IZqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_36r-IpqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_36slMJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_36slMZqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_36slMpqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_36slM5qWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_36tMQJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_36tzUJqWEeycFMQoSaFamg">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_36QgUJqWEeycFMQoSaFamg" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_36g_AJqWEeycFMQoSaFamg" name="test">
+        <packagedElement xmi:type="uml:Class" xmi:id="_36o60JqWEeycFMQoSaFamg" name="YourServlet">
+          <generalization xmi:id="_3_qkwpqWEeycFMQoSaFamg" general="_3_GkEZqWEeycFMQoSaFamg"/>
+          <ownedAttribute xmi:id="_3_sZ8JqWEeycFMQoSaFamg" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_3_toEJqWEeycFMQoSaFamg" value="1L"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3_wEUJqWEeycFMQoSaFamg" name="YourServlet" specification="_36vBcJqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_3_wEUZqWEeycFMQoSaFamg" type="_36o60JqWEeycFMQoSaFamg" direction="return"/>
+            <language>java</language>
+            <body>super();&#xD;
+     // TODO Auto-generated constructor stub&#xD;
+ </body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3_wrYJqWEeycFMQoSaFamg" name="init" specification="_3_floJqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_3_wrYZqWEeycFMQoSaFamg" name="config" type="_3_BrkJqWEeycFMQoSaFamg"/>
+            <language>java</language>
+            <body>// TODO Auto-generated method stub&#xD;
+		System.out.println(&quot;init&quot;);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3_wrYpqWEeycFMQoSaFamg" name="destroy" specification="_36yEwJqWEeycFMQoSaFamg">
+            <language>java</language>
+            <body>// TODO Auto-generated method stub&#xD;
+		System.out.println(&quot;destroy&quot;);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3_xScJqWEeycFMQoSaFamg" name="service" specification="_3_keIJqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_3_xScZqWEeycFMQoSaFamg" name="request" type="_3_IZQJqWEeycFMQoSaFamg"/>
+            <ownedParameter xmi:id="_3_xScpqWEeycFMQoSaFamg" name="response" type="_3_LckJqWEeycFMQoSaFamg"/>
+            <language>java</language>
+            <body>// TODO Auto-generated method stub&#xD;
+		System.out.println(&quot;service&quot;);&#xD;
+		response.getWriter().append(&quot;333333_service&quot;);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_3_x5gJqWEeycFMQoSaFamg" name="doGet" specification="_3_oIgJqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_3_x5gZqWEeycFMQoSaFamg" name="req" type="_3_IZQJqWEeycFMQoSaFamg"/>
+            <ownedParameter xmi:id="_3_x5gpqWEeycFMQoSaFamg" name="resp" type="_3_LckJqWEeycFMQoSaFamg"/>
+            <language>java</language>
+            <body>System.out.println(&quot;doGet&quot;);&#xD;
+		resp.getWriter().append(&quot;dododoGeteetetet&quot;);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_36vBcJqWEeycFMQoSaFamg" name="YourServlet" method="_3_wEUJqWEeycFMQoSaFamg">
+            <eAnnotations xmi:id="_36vogJqWEeycFMQoSaFamg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_36vogZqWEeycFMQoSaFamg" key="create"/>
+            </eAnnotations>
+            <ownedComment xmi:id="_3_zusZqWEeycFMQoSaFamg">
+              <body>@see HttpServlet#HttpServlet()</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_36vogpqWEeycFMQoSaFamg" type="_36o60JqWEeycFMQoSaFamg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_36yEwJqWEeycFMQoSaFamg" name="destroy" method="_3_wrYpqWEeycFMQoSaFamg">
+            <ownedComment xmi:id="_3_0VwZqWEeycFMQoSaFamg">
+              <body>@see Servlet#destroy()</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_floJqWEeycFMQoSaFamg" name="init" method="_3_wrYJqWEeycFMQoSaFamg" raisedException="_3_EH0JqWEeycFMQoSaFamg">
+            <ownedComment xmi:id="_3_0VwJqWEeycFMQoSaFamg">
+              <body>@see Servlet#init(ServletConfig)</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_gMsJqWEeycFMQoSaFamg" name="config" type="_3_BrkJqWEeycFMQoSaFamg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_keIJqWEeycFMQoSaFamg" name="service" visibility="protected" method="_3_xScJqWEeycFMQoSaFamg" raisedException="_3_EH0JqWEeycFMQoSaFamg _3-694JqWEeycFMQoSaFamg">
+            <ownedComment xmi:id="_3_0VwpqWEeycFMQoSaFamg">
+              <body>@see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_lFMJqWEeycFMQoSaFamg" name="request" type="_3_IZQJqWEeycFMQoSaFamg"/>
+            <ownedParameter xmi:id="_3_lFMZqWEeycFMQoSaFamg" name="response" type="_3_LckJqWEeycFMQoSaFamg"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_oIgJqWEeycFMQoSaFamg" name="doGet" visibility="protected" method="_3_x5gJqWEeycFMQoSaFamg" raisedException="_3_EH0JqWEeycFMQoSaFamg _3-694JqWEeycFMQoSaFamg">
+            <ownedParameter xmi:id="_3_oIgZqWEeycFMQoSaFamg" name="req" type="_3_IZQJqWEeycFMQoSaFamg"/>
+            <ownedParameter xmi:id="_3_ovkJqWEeycFMQoSaFamg" name="resp" type="_3_LckJqWEeycFMQoSaFamg"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_36TjoJqWEeycFMQoSaFamg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_36UKsJqWEeycFMQoSaFamg" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_3-694JqWEeycFMQoSaFamg" name="IOException"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_36UxwJqWEeycFMQoSaFamg" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_36UxwZqWEeycFMQoSaFamg" name="servlet">
+        <packagedElement xmi:type="uml:Package" xmi:id="_36VY0JqWEeycFMQoSaFamg" name="annotation">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_3_FV8ZqWEeycFMQoSaFamg" name="WebServlet"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_36V_4JqWEeycFMQoSaFamg" name="http">
+          <packagedElement xmi:type="uml:Class" xmi:id="_3_GkEZqWEeycFMQoSaFamg" name="HttpServlet"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_3_IZQJqWEeycFMQoSaFamg" name="HttpServletRequest"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_3_LckJqWEeycFMQoSaFamg" name="HttpServletResponse"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_3_BrkJqWEeycFMQoSaFamg" name="ServletConfig"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_3_EH0JqWEeycFMQoSaFamg" name="ServletException"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_31MaIJqWEeycFMQoSaFamg">
+      <eAnnotations xmi:id="_31MaIZqWEeycFMQoSaFamg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_31NBMJqWEeycFMQoSaFamg" base_Package="_3pybYJqWEeycFMQoSaFamg">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_36rXEJqWEeycFMQoSaFamg" base_Element="_36o60JqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:StyledElement xmi:id="_36w2oJqWEeycFMQoSaFamg" base_Element="_36vBcJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:StyledElement xmi:id="_36yr0JqWEeycFMQoSaFamg" base_Element="_36yEwJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Annotations xmi:id="_363kUJqWEeycFMQoSaFamg" base_Element="_36o60JqWEeycFMQoSaFamg">
+    <annotations xmi:id="_364LYJqWEeycFMQoSaFamg" name="WebServlet">
+      <annotationParameters xmi:id="_364LYZqWEeycFMQoSaFamg" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_3_zusJqWEeycFMQoSaFamg" value="&quot;/yourservlet&quot;"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_3--oQJqWEeycFMQoSaFamg" base_Element="_3-694JqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_DgwJqWEeycFMQoSaFamg" base_Element="_3_BrkJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_FV8JqWEeycFMQoSaFamg" base_Element="_3_EH0JqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_GkEJqWEeycFMQoSaFamg" base_Element="_3_FV8ZqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_HyMJqWEeycFMQoSaFamg" base_Element="_3_GkEZqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_K1gJqWEeycFMQoSaFamg" base_Element="_3_IZQJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Reference xmi:id="_3_Of4JqWEeycFMQoSaFamg" base_Element="_3_LckJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:StyledElement xmi:id="_3_gzwJqWEeycFMQoSaFamg" base_Element="_3_floJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:StyledElement xmi:id="_3_mTUJqWEeycFMQoSaFamg" base_Element="_3_keIJqWEeycFMQoSaFamg"/>
+  <UMLLabProfile:Annotations xmi:id="_3_qkwJqWEeycFMQoSaFamg" base_Element="_3_oIgJqWEeycFMQoSaFamg">
+    <annotations xmi:id="_3_qkwZqWEeycFMQoSaFamg" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_3_uPIJqWEeycFMQoSaFamg" base_Element="_3_sZ8JqWEeycFMQoSaFamg"/>
+</xmi:XMI>

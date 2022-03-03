@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_KOvRoJoFEeyDqL1MZZc4JQ" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_KOvRoZoFEeyDqL1MZZc4JQ" source="codegen">
         <details xmi:id="_KOvRopoFEeyDqL1MZZc4JQ" key="codegenDirectory" value="/TeacherTest/src"/>
-        <details xmi:id="_KswqYJoFEeyDqL1MZZc4JQ" key="AssociatedSourceCode" value="/TeacherTest/src/com/test/Address.java;2266504632/1;/TeacherTest/src/com/test/MAddress.java;289114396/1;"/>
+        <details xmi:id="_KswqYJoFEeyDqL1MZZc4JQ" key="AssociatedSourceCode" value="/TeacherTest/src/com/test/Address.java;2266504632/1;/TeacherTest/src/com/test/MAddress.java;2568330643/1;"/>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_KbQDoJoFEeyDqL1MZZc4JQ">
@@ -67,7 +67,14 @@
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KcFKEpoFEeyDqL1MZZc4JQ" value="*"/>
             </ownedParameter>
             <language>java</language>
-            <body>// 메모리맵(메모리영역) -> ds(data segment), cs(code segment), static(정적), heap(동적), stack(고정)&#xD;
+            <body>/*&#xD;
+		 메모리맵(메모리영역) -> ds(data segment), cs(code segment), static(정적), heap(동적), stack(고정)&#xD;
+		 ds: 데이터를 관리하는 곳(해쉬테이블)&#xD;
+		 cs: 코드를 관리하는 곳&#xD;
+		 static: 정적영역, 정적공간, static, class, struct, union, function &amp;&#xD;
+		 heap: 동적할당공간, 자유영역공간(다른 프로그램 영역이 할당해준 공간에 new연산자를 만나면 메모리를 사용했다가 소멸되는 곳&#xD;
+		 stack: 고정 공간(휴지통)&#xD;
+		*/&#xD;
 		Address a1 = new Address(); // new -> 객체를 생성자를 통해서 생성하면서 메모리(자유영역공간 heap)에 로드. (빈 방을 만든다)&#xD;
 		Address a2 = new Address();&#xD;
 		Address a3 = new Address();&#xD;
@@ -76,17 +83,26 @@
 		a1.setAddr(&quot;서울&quot;);&#xD;
 		a1.setTel(&quot;02-0000&quot;);		&#xD;
 		&#xD;
-		a1.setName(&quot;정길동&quot;);&#xD;
-		a1.setAddr(&quot;인천&quot;);&#xD;
-		a1.setTel(&quot;032-0000&quot;);&#xD;
+		a2.setName(&quot;정길동&quot;);&#xD;
+		a2.setAddr(&quot;인천&quot;);&#xD;
+		a2.setTel(&quot;032-0000&quot;);&#xD;
 		&#xD;
-		a1.setName(&quot;박길동&quot;);&#xD;
-		a1.setAddr(&quot;부산&quot;);&#xD;
-		a1.setTel(&quot;051-0000&quot;);&#xD;
+		a3.setName(&quot;박길동&quot;);&#xD;
+		a3.setAddr(&quot;부산&quot;);&#xD;
+		a3.setTel(&quot;051-0000&quot;);&#xD;
 		&#xD;
 		System.out.println(a1); // a1.toString() 오버라이드 해놔서 알아서 잘 나옴.&#xD;
 		System.out.println(a2);&#xD;
 		System.out.println(a3);&#xD;
+		&#xD;
+		Address[] ar = new Address[3];&#xD;
+		ar[0] = new Address();&#xD;
+		ar[1] = new Address();&#xD;
+		ar[2] = new Address();&#xD;
+		&#xD;
+		for(Address res: ar) {&#xD;
+			System.out.println(res);&#xD;
+		}&#xD;
 		&#xD;
 		&#xD;
 &#xD;

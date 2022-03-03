@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_J-pIQJqWEeycFMQoSaFamg">
+  <modelElement href="TeacherTest01.uml#_KI4CUJqWEeycFMQoSaFamg"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_KKDuEJqWEeycFMQoSaFamg" name="Address">
+    <modelElement href="TeacherTest01.uml#_KI9h4JqWEeycFMQoSaFamg"/>
+    <visualProperties xmi:id="_KKDuEZqWEeycFMQoSaFamg" position="172.0,117.0"/>
+    <visibility xmi:id="_KKDuEpqWEeycFMQoSaFamg" label="+"/>
+    <attributes xmi:id="_KKDuE5qWEeycFMQoSaFamg" name="name">
+      <modelElement href="TeacherTest01.uml#_KJE2oJqWEeycFMQoSaFamg"/>
+      <visibility xmi:id="_KKDuFJqWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_KKDuFZqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <type xmi:id="_KKDuFpqWEeycFMQoSaFamg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KKDuF5qWEeycFMQoSaFamg" name="addr">
+      <modelElement href="TeacherTest01.uml#_KJFdsJqWEeycFMQoSaFamg"/>
+      <visibility xmi:id="_KKDuGJqWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_KKDuGZqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <type xmi:id="_KKDuGpqWEeycFMQoSaFamg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_KKDuG5qWEeycFMQoSaFamg" name="tel">
+      <modelElement href="TeacherTest01.uml#_KJFdsZqWEeycFMQoSaFamg"/>
+      <visibility xmi:id="_KKDuHJqWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_KKDuHZqWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <type xmi:id="_KKDuHpqWEeycFMQoSaFamg" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_KKDuH5qWEeycFMQoSaFamg" name="toString">
+      <modelElement href="TeacherTest01.uml#_KJAlMJqWEeycFMQoSaFamg"/>
+      <stereotypes xmi:id="_KKDuIJqWEeycFMQoSaFamg" name="LegacyStyledElement">
+        <modelElement href="TeacherTest01.uml#_KJBzUJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_KKDuIZqWEeycFMQoSaFamg" name="Annotations">
+        <modelElement href="TeacherTest01.uml#_KJDBcJqWEeycFMQoSaFamg"/>
+      </stereotypes>
+      <visibility xmi:id="_KKDuIpqWEeycFMQoSaFamg" label="+"/>
+      <cardinality xmi:id="_KKDuI5qWEeycFMQoSaFamg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_KKDuJJqWEeycFMQoSaFamg">
+        <modelElement href="TeacherTest01.uml#_KJBMQJqWEeycFMQoSaFamg"/>
+        <type xmi:id="_KKDuJZqWEeycFMQoSaFamg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
