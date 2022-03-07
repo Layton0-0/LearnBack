@@ -31,24 +31,35 @@ web04 _ 3월 3일 목요일
   				  false -> 
   				  
   3) 내장 객체 :  내장 객체(Implicit Object)란 변수 선언 및 객체 생성과정 없이 바로 사용할 수 있는 객체를 의미한다. 
-				이들 내장 객체를 사용할 경우 프로그래밍을 최대한 단순화시킬 수 있다. 
+				이들 내장 객체를 사용할 경우 프로그래밍을 최대한 단순화시킬 수 있다.  
    
- 	request  	:  javax.servlet.http.HttpServletRequest 
+   비트(0, 1) * 8 = 8비트 = 1바이트
+   임시기억장소: 버퍼, 레지스터, 클립보드, 누산기
+   
+   
+	<<입출력 관련 내장 객체>>
+ 	request  	:  javax.servlet.http.HttpServletRequest ( 브라우저 -> jsp로 요청할 때 전달되는 데이터를 리턴 )
  	response 	:  javax.servlet.http.HttpServletResponse
- 	out      	:  javax.servlet.jsp.JspWrite
+ 	out      	:  javax.servlet.jsp.JspWrite ( jsp페이지의 결과를 브라우저로 리턴하는 출력 스트림 )
  
- 
- 	session 	: javax.servlet.http.HttpSession 
- 	application	: javax.servlet.ServletContext 
- 	pageContext	: javax.servlet.jsp.PageContext 
+ 	<<JSP 외부 환경 정보관련 내장객체: 웹 어플리케이션에서 수행되는 웹페이지 등의 환경정보를 구성>>
+ 	session 	: javax.servlet.http.HttpSession	(서버에 클라이언트 정보를 저장하기 위한 객체)
+ 	application	: javax.servlet.ServletContext		(웹 어플리케이션 자체)
+ 	pageContext	: javax.servlet.jsp.PageContext 	(현재 요청된 JSP의 Context를 의미)
  	
- 	config 		: javax.servlet.ServletConfig
- 	page  		: javax.servlet.jsp.JspPage
+ 	<<page servlet에 관련된 내장객체>>
+ 	config 		: javax.servlet.ServletConfig		(servlet의 초기 설정데이터)
+ 	page  		: javax.servlet.jsp.JspPage			
  	
- 	exception 	: java.lang.Throwable
+ 	exception 	: java.lang.Throwable				(page 지시자 속성 isError=true 여야만 사용할 수 있음)
  
   
   4) 객체의 범위는 page, request, session, application으로 나누어 진다. 
+  
+  page 영역		: 서블릿 인스턴스의 _jspService() 메소드가 실행되는 동안에 유효한 영역
+  request 영역	: 클라이언트의 요청이 처리되는 동안에 유효한 영역
+  session 영역	: 세션이 유지되는 동안에 유효한 영역
+  application	: 해당 context가 유지되는 영역
   
   
   
