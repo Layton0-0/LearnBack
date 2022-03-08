@@ -1,0 +1,17 @@
+
+	${}에 jsp내장객체를 사용할 수 있다.
+	1. pageScope ex) ${pageScope.a}
+	2. requestScope
+	3. sessionScope 
+	4. applicationScope
+	5. param: 파라미터 변수들
+	6. paramValues
+	7. header: HTTP request 헤더
+	8. headerValues
+	9. initParam: 컨텍스트 초기변수, web.xml에 지정
+	10. cookie
+	11. pageContext
+	
+	workshop
+		-> webScore의 view 페이지 코드를 모두 JSTL/EL로 바꾸자
+		제출내역 workshop_1.jar
