@@ -13,7 +13,7 @@ import com.entity.Score;
 /**
  * Servlet implementation class ScoreInput
  */
-@WebServlet("/ScoreInput")
+//@WebServlet("/ScoreInput")
 public class ScoreInput extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

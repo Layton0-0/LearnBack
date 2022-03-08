@@ -16,7 +16,7 @@ import com.entity.*;
 /**
  * Servlet implementation class ScoreAll
  */
-@WebServlet("/ScoreAll")
+//@WebServlet("/ScoreAll")
 public class ScoreAll extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// db에 있는 전체 내용을 리턴받아 jsp로 보낸다.
@@ -30,6 +30,7 @@ public class ScoreAll extends HttpServlet {
 		request.setAttribute("all", all); //저장
 		
 		// 전송
+//		ScoreAll.jsp랑 출력 연결을 하고, forward로 그쪽으로 정보를 보내 출력(include일 경우 자기 스스로 처리)
 		RequestDispatcher rd = request.getRequestDispatcher("ScoreAll.jsp");
 		rd.forward(request, response);
 	}

@@ -15,7 +15,7 @@ import com.entity.Score;
 /**
  * Servlet implementation class ScoreFind
  */
-@WebServlet("/ScoreFind")
+//@WebServlet("/ScoreFind")
 public class ScoreFind extends HttpServlet {
 	// 이름으로 찾은 레코드를 ScoreUpdate.jsp 페이지에 find라는 이름으로 전달한다.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

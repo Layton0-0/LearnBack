@@ -13,7 +13,7 @@ import com.entity.Score;
 /**
  * Servlet implementation class ScoreUpdate
  */
-@WebServlet("/ScoreUpdate")
+//@WebServlet("/ScoreUpdate")
 public class ScoreUpdate extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

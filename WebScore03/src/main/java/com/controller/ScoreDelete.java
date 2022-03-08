@@ -12,7 +12,7 @@ import com.biz.ScoreBiz;
 /**
  * Servlet implementation class ScoreDelete
  */
-@WebServlet("/ScoreDelete")
+//@WebServlet("/ScoreDelete")
 public class ScoreDelete extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

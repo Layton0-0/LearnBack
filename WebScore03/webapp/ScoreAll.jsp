@@ -34,6 +34,7 @@ ArrayList<Score> sm = (ArrayList<Score>) request.getAttribute("all");
 			<td><%=res.getTot()%></td>
 			<td><%=res.getAvg()%></td>
 			<td><%=res.getGrade()%></td>
+			<!-- ScoreFind 서블릿 파일에 View단의 입력을 받아서 전달한다. -->
 			<td><a href="ScoreFind?name=<%=res.getName()%>"> 수정 </a></td>
 			<td><a href="ScoreDelete?name=<%=res.getName()%>"> 삭제 </a></td>
 		</tr>
