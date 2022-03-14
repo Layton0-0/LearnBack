@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setDriverClass, setPassword, setUrl, setUsername -->
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource"
+		p:driverClass="com.mysql.cj.jdbc.Driver"
+		p:url="jdbc:mysql://localhost:3306/yoondb" p:username="root"
+		p:password="1121" />
+
+
+	<bean id="memberDAO" class="sample10.MemberDAO">
+		<property name="dataSource" ref="ds"></property>
+
+	</bean>
+
+</beans>
+
+
+
+

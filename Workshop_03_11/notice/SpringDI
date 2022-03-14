@@ -1,0 +1,20 @@
+SpringDI
+
+sample1 : DI 개념을 이해한다.
+			is~a관계를 이용한 구도를 학습한다.
+			springbeans를 이용한 설정으 구현한다.
+			설정파일을 객체로 연동해서 호출한 구문을 확인한다.
+			생성자로 값 전달 구조를 이해하고 DI 연동
+			
+sample2 : has ~a 관계를 이용한 DI를 구현한다.
+			setter Inject 를 구현해 보자.
+			https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-setter-injection
+			spring은 beans 객체를 싱글톤으로 메모리 로드 한 다음 binding 시킨다.
+				ex)Calendar rightNow = Calendar.getInstance();
+				ex)Runtime res = Runtime.getRuntime()
+				생성자를 private로 지정해도 문제 없다.
+				
+sample3 : java.util.* 클래스를 생성자 혹은 setter inject 하는 방법을 구현할 수 있다.
+			값 전달을 <bean/>으로 지정할 수 있다.
+			has ~ a 관계, is ~a 관계를 살펴보고 객체를 메모리 로드를 싱글톤으로 지정하는
+			applicatonContext의 원형을 이해할 수 있다.

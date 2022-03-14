@@ -1,0 +1,107 @@
+Web08_ 3월 10일 목요일
+
+1. 웹페이지에 파일 관리를 연동하고 구현할 수 있다. (java.io)
+
+	1) test/* -> java.io 패키지의 파일처리 클래스를 이용해서 선언된
+		메소드로 파일을 웹에서 관리한다.
+
+	2) java.io : byte, char, node(Object) 단위로 분류되어 데이터를 처리
+		자바 API 스트림을 기반으로 입출력의 기능을 가진 패키지
+		웹, 네트워크 , 소켓등의 장치를 통해서 파일 입출력을 사용하는 패키지
+		
+		-java.lang.Object
+				- Reader - char단위로 읽어서 리턴 	int read() -2byte
+				- Writer - char단위로 출력		void write(char)
+				- File (탐색기 CRUD)
+				- InputStream -byte단위로 읽어서 리턴		int read()
+				- OutputStream -byte단위로 출력		void write(byte)
+				- RandomAcessFile
+
+	class AA{}
+	class BB extends AA{}
+	class CC extends BB{}
+		-> 동적 바인딩 구현과 클래스 및 메소드의 매개인자로
+			대입된 선조의 주소를 통해
+			후손의 객체를 지정해서 구현하는 방법을 학습
+
+	int a = 100;
+
+	class AA {getA();}
+	class BB extends AA {getB();}
+	class DD extends BB {getD();}
+
+	My m1 = new My(new DD());
+
+	class My {
+		 DD d;    //has a
+		public My(DD d) {	// AA(), BB(), DD()
+			this.d = d;
+		}
+		public void prn() {
+			d.getA();
+			d.getB();
+			d.getD();
+		}
+		public void prn02(BB b) {   // BB b= new DD();
+			b.getB();
+			b.getD();
+		}
+	}
+
+	ex)
+	class AA {}
+	class BB extends AA{}
+	class DD extends BB{}
+	
+
+	AA a1 = new AA():
+	BB b1 = new BB();
+	DD d1 - new DD();
+
+	BB b2 = new BB();
+	AA a1 = new DD();
+	AA a3 = new BB();
+	
+	인터페이스는 다중상속을 구현할 수 있고 클래스는 단일 상속을 원칙으로 한다.
+	
+
+2. 파일의 업로드를 구현 해 보자. (Servlet -> cos.jar / spring -> common)
+
+3. 필터를 이용해서 웹 프로젝트에 구현되는 보안 원형(Filters_가로채기 , Listener_이벤트)을 살펴보고
+	설정파일을(web.xml) 구현 해보자.
+
+- 필터를 사용하는 범위 및 경우
+Examples that have been identified for this design are
+1) Authentication Filters
+2) Logging and Auditing Filters
+3) Image conversion Filters
+4) Data compression Filters
+5) Encryption Filters
+6) Tokenizing Filters
+7) Filters that trigger resource access events
+8) XSL/T filters
+9) Mime-type chain Filter
+	
+	-Filter_가로채기: 웹 어플리케이션에서 사용하는 서블릿이나 JSP에 영향을
+		주지않고 request,response를 조작해서 사용자 요청에 따라 특정
+		servlet또는 jsp가 실행되기 전에 사용할 수 있는 작업을 수행하는
+		클래스 태그
+
+		
+
+
+4. spring 의 전반적인 구성원리를 살펴보고 구조를 설명할 수 있다. 
+
+5. spring DI를 구현하는 방법 및 설정 구조, 클래스 연동에 대한 의존성을
+	이해하고 설명할수 있다.
+
+6. mini-workshop 즐겨보자 
+
+==============================
+
+webscore 다시 공부
+
+
+목업에 움짤 넣는다고 프로토타입이 되는게 아니다.
+동적인것이란 것은 사용자입력이나 시간에 따라 반응하거나 조건에 따라 유기적으로 동작해야하는 것임.
+즉 기능이 중심이냐, 보여주기가 중심이냐의 차이임.

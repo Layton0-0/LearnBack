@@ -1,0 +1,64 @@
+
+
+Spring DI
+
+ - com.sample1 : DI 개념을 이해
+ 				 is ~a 관계를 이용한 구도 학습
+ 				 springbeans를 이용한 설정을 구현
+ 			 	 설정파일을 객체로 연동해서 호출한 구문을 확인.
+ 			 
+ - com.sample2 : has ~ a 관계를 이용한 DI를 구현.
+ 				 setter Inject를 구현.
+ 				 spring은 bean객체를 싱글톤으로 메모리 로드한 다음 binding시킨다.
+ 				 
+ 				 	ex)Calendar rightNow = Calendar.getInstance();
+ 				 	ex)Runtime res = Runtime.getRuntime()
+ 				 	
+ 				 	생성자를 private로 지정해도 문제 없다.
+ 				 	
+ - com.sample3 : java.util.* 클래스를 생성자 혹은 setter inject하는 방법을 구현할 수 있다.
+ 				 값 전달을 <bean/> 으로 지정할 수 있다.
+ 				 has ~ a , is~ a 관계를 살펴보고 객체를 메모리 로드를 싱글톤으로 지정하는 
+ 				 applicationContext의 원형을 이해할 수 있다.
+ 				 
+
+ - com.sample4 : 추상 클래스의 패턴과 싱글톤 패턴을 이해하고 구현한다.
+ 				
+ 				싱글톤(Singleton Pattern) : 스태틱 메소드와 private 생성자를 만들어서 
+ 											단 하나의 인스턴스를 연동할 수 있도록 구현하는 패턴
+ 					ex) 
+ 						Class Test {
+						        private Test(){}
+      							public static Test getInc() { return new Test();}
+      						}
+      						Test t1 = Test.getInc(); -> 싱글톤
+      
+   				싱글톤 레지스트르 (Singleton) : 스프링에서 직접 싱글톤 형태의 오브젝트를 만들고 관리하는 기능을 제공하는 것, 
+   											스프링은 빈즈 오브젝트는 내부적으로 싱글톤 레지스트리를 만들어서 제공한다.  
+		
+ 							
+ 							
+ - com.sample5 : lazy-init 사용  , 
+    		ex) depends-on  ="참조되는 객체의 id"(sample2/appclicationContext2.xml) 
+           
+			* lazy-init : 빈 팩토리를 이용해서 스프링에서 설정을  하고 난 후  객체를 id로 getBean()로
+   							호출을 하게 되면 메모리에  올려진 객체들이 선언된 순서대로 생성된 것을 확인 할 수 있다. 
+   							기본적으로 스프링 컨테이너가 시작할 때 싱글톤에 의해 bean에 대해 모든 인스턴스화 된다.
+   							만일 특정 싱글톤유형에 대한 bean을 컨테이너가 시작할 때 인스턴스화 시키지 않고 
+   							해당 bean을 사용하고자 하는 시점에 인스턴스화 하고 싶을 때 사용하는  속성 키워드가 lazy-init 이다.     
+   
+ 			* depends-on : bean이 초기화 되기 전에 먼저 초기화 되는 키워드     
+               			- 특정 bean이 초기화 되기 전에 초기화 되어야 하는 bean을 명시적으로 선언 
+               			- 생성자와 setter 메소드로 값을 전달 하기 이전에 메모리에 생성되는 
+               				객체가 정의 되어  메모리 체크를 할때 많이 사용되는 키워드이다.  
+                		- 미리 서버를 구동 시켜 놓고 특정 리소스에 대한 작업을 체크할 때 사용된다.                  
+              				[NoSuchBeanDefinitionException]
+ 							
+ 							
+ 							
+ 							
+ 							
+ 							
+ 							
+ 							
+ 							
