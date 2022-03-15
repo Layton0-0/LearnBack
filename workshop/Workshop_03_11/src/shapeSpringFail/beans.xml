@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- shape[0] = new Triangle(7, 5, "Blue"); shape[1] = new Rectangle(4, 
+		6, "Blue"); shape[2] = new Triangle(6, 7, "Red"); shape[3] = new Rectangle(8, 
+		3, "Red"); shape[4] = new Triangle(9, 8, "White"); shape[5] = new Rectangle(5, 
+		7, "White"); -->
+
+	<bean id="shape" class="shapeSpring.Shape">
+		<property name="shape1" ref="triangle1"></property>
+		<property name="shape2" ref="rectangle1"></property>
+		<property name="shape3" ref="triangle2"></property>
+		<property name="shape4" ref="rectangle2"></property>
+		<property name="shape5" ref="triangle3"></property>
+		<property name="shape6" ref="rectangle3"></property>
+	</bean>
+
+
+	<bean id="triangle1" class="shapeSpring.Triangle" p:width="7"
+		p:height="5" p:color="Blue" />
+	<bean id="triangle2" class="shapeSpring.Triangle" p:width="6"
+		p:height="7" p:color="Red" />
+	<bean id="triangle3" class="shapeSpring.Triangle" p:width="9"
+		p:height="8" p:color="White" />
+
+	<bean id="rectangle1" class="shapeSpring.Rectangle" p:width="4"
+		p:height="6" p:color="Blue" />
+	<bean id="rectangle2" class="shapeSpring.Rectangle" p:width="8"
+		p:height="3" p:color="Red" />
+	<bean id="rectangle3" class="shapeSpring.Rectangle" p:width="5"
+		p:height="7" p:color="White" />
+
+
+
+
+</beans>

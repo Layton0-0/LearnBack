@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<aop:aspectj-autoproxy />
+	<bean id="g7" class="com.test04.G7Class"></bean>
+	<bean id="student" class="com.test04.Student"></bean>
+	<bean id="myAdvice" class="com.test04.MyAspect"></bean>
+
+
+	<aop:config>
+		<aop:aspect ref="myAdvice">
+			<aop:before method="before"
+				pointcut="execution(* classWork())" />
+
+			<aop:after method="After"
+				pointcut="execution(* classWork())" />
+
+			<aop:after-throwing method="throwing"
+				pointcut="execution(public void com.test04.*.*(..))" throwing="e" />
+
+		</aop:aspect>
+	</aop:config>
+
+</beans>

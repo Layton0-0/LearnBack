@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-5.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-5.3.xsd">
+
+	<!-- 2. g7, student, myAdvice, myAdvisor 메모리에 올라감. -->
+	<bean id="g7" class="com.test02.G7Class"></bean>
+	<bean id="student" class="com.test02.Student"></bean>
+
+	<!-- 공통사항: Advice(횡단에 대한 관심사항) -->
+	<bean id="myAdvice" class="com.test02.MyAspect"></bean>
+
+	<!-- 7. -->
+	<!-- 핵심관심사항: 무엇을(Advice) 언제(PointCut) = Aspect -->
+	<!-- org.springframework.aop.support.DefaultPointcutAdvisor -->
+	<!-- org.springframework.aop.aspectj.AspectJExpressionPointCutAdvisor -->
+	<bean id="myAdvisor"
+		class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<!-- 공통사항 메소드를 가로채기 한 다음 전체 실행 중에 proceed()를 호출한다. -->
+		<!-- 6. -->
+		<property name="advice" ref="myAdvice"></property>
+		<!-- ..은 파라미터를 뜻한다. 없어도 되고 있어도 된다는 의미의 두개 -->
+		<property name="expression" value="execution(public * *(..))"></property>
+
+	</bean>
+	<!-- $6.8.1 -->
+	<!-- 5. 메소드를 실행한다. 가로채기해서 전달한다.  myAdvisor -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
+
+
+</beans>
