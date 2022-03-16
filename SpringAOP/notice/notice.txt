@@ -94,5 +94,9 @@ SpringAOP
 		
     - com.test03: @로 설정하는 방법                
                
-    - com.test04: <aop:/>           
+    - com.test04: <aop:/>         
+    
+    execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-pattern(param-pattern)
+                throws-pattern?)
+      
     
