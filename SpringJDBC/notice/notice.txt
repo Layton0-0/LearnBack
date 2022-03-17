@@ -1,0 +1,26 @@
+Web12_ 3월 17일 목요일 ~ 3월 18일 금요일
+
+1. Spring JDBC 의 Api를 연동하고 이해할 수 있다.
+   <Spring 4.0>------------------------------------------------------------------------------
+      
+   1-1). springJDBC: org.springframework.jdbc.datasource.SimpleDriverDataSource
+         -springJDBC(DAO)
+   
+   1-2). spring + ORM (object - relational mapping)
+         ibatis(ver 2.0, 3.0), mybatis(5.0) / Hibernate[s]
+      .xml로 쿼리를 작성한 파일을 객체로 매핑하는 것    ==> Mybatis 기준
+
+2. ORM의 태그설정, @기법, 동적쿼리 등을 살펴보고 적용할 수 있다.
+
+===========================================================================
+
+- test01: DriverManagerDataSource / JDBCTemplate
+
+JDBCTemplate
+	1. update(): update, insert, delete
+	2. query(): select, update, insert, delete의 쿼리를 받아서 실행
+	3. queryforObject(): select형 Object -> sql find
+	4. queryforInt(): query의 return type
+	
+- test02: DB 속성 파일에 변수 및 <beans> xml 값 대입
+	Entity를 접목하자.

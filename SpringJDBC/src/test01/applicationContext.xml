@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-	<!-- model에 관련된 내용을 저장하는 곳 -->
-	<context:component-scan base-package="com.model" />
-	<context:component-scan
-		base-package="com.entity" />
 
-	<!-- /WEB-INF/view/insert.jsp -> insert만 리턴해줘. 나머지는 내가 만들어줄게 -->
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-		<property name="prefix" value="/WEB-INF/view/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-
+	<!-- 데이터소스설정: DriverManagerDataSource클래스 이용 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.SimpleDriverDataSource"
 		p:driverClass="com.mysql.cj.jdbc.Driver"
 		p:url="jdbc:mysql://localhost:3306/yoondb?characterEncoding=UTF-8&amp;serverTimezone=UTC"
 		p:username="root" p:password="1121" />
 
-	<!-- JdbcTemplate: setdataSource(DataSource ds), CRUD -->
-	<bean id="jdbcTemplate"
-		class="org.springframework.jdbc.core.JdbcTemplate">
+	<bean id="test"
+		class="test01.FirstJdbcDaoImple">
 		<property name="dataSource" ref="dataSource"></property> <!-- db연결 -->
 	</bean>
 

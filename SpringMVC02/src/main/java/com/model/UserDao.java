@@ -14,7 +14,7 @@ import com.entity.User;
 @Repository
 public class UserDao {
 	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbcTemplate; // userDao의 멤버변수, 전역변수
 
 	public boolean insertUser(User user) {
 		int res = jdbcTemplate.update("insert into user1 values(?,?,?)",
