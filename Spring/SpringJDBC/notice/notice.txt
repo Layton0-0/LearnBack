@@ -24,3 +24,13 @@ JDBCTemplate
 	
 - test02: DB 속성 파일에 변수 및 <beans> xml 값 대입
 	Entity를 접목하자.
+	
+- test03: test02를 @로 설정해서 사용
+
+- test04: mybatis 연동
+
+	4-1) 환경설정 -> .xml(config)
+	4-2) 쿼리 	-> .xml(mapper), @: interface원형, 동적쿼리
+	
+- test05: mybatis 연동해보자.
+	쿼리 -> @: interface 매퍼로

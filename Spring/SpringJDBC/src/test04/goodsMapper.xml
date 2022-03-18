@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mybatis.goodsMapper">
+  <select id="listGoods" resultType="test04.GoodsVO">
+  	select * from goodsinfo
+  </select>
+  <!-- 하나거나 같은 타입으로만 이루어져있을 경우 타입객체로 지정해도 무방하다. VO로 줘도 됨! -->
+  <select id="findGoods" resultType="test04.GoodsVO" parameterType="java.lang.String">
+  	select * from goodsinfo where code=#{code}
+  </select>
+  <insert id="insertGoods" parameterType="test04.GoodsVO">
+  	insert into goodsinfo(code, name, price, maker) values(#{code}, #{name}, #{price}, #{maker})
+  </insert>
+  <update id="updateGoods" parameterType="test04.GoodsVO">
+  	update goodsinfo set name=#{name}, price=#{price}, maker=#{maker} where code=#{code}
+  </update>
+  <delete id="deleteGoods" parameterType="java.lang.String">
+  	delete from goodsinfo where name=#{name}
+  </delete>
+</mapper>
