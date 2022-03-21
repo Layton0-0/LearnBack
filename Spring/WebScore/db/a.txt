@@ -1,0 +1,20 @@
+
+  project  _  WebScore
+           com.biz  - ScoreBIZ  
+           com.dao -ScoreDAO  (db - CRUD)
+           com.vo   -ScoreVO    
+                  
+           com.entity-ScoreEntity (db table)   
+           com.controller - ScoreController
+         
+         contextPath: WebScore
+         
+         1) 입력: /score/insert.do -> POST
+         
+         2) 찾기: score/find.do?find_name=${se.name} -> GET
+         
+         3) 수정: /score/update.do -> GET
+         
+         4) 삭제: score/delete.do?del_name=${se.name} -> GET
+         
+         5) 전체 목록: /WebScore/score/list.do -> GET방식
