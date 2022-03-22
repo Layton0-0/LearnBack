@@ -14,8 +14,6 @@ import customer.vo.CustomerVO;
 public class CustomerSearch {
 	@Autowired
 	private CustomerBiz biz;
-	
-	
 
 	@RequestMapping("/customerSearch.do")
 	public ModelAndView search(@RequestParam("id") String id){

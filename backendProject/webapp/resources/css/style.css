@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+  padding-bottom: 0.7em;
+}
+
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, auto));
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    ". title ."
+    ". idpw ."
+    ". buttons .";
+  gap: 0.3rem;
+}
+
+.title {
+  border-bottom: 1px solid gray;
+  grid-area: title;
+}
+
+.idpw {
+  justify-content: center;
+  grid-area: idpw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, auto));
+  grid-template-rows: repeat(2, auto);
+  row-gap: 0.5em;
+}
+.idpw label {
+  margin-right: 0.7em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: buttons;
+  margin: 20px auto;
+}
+.buttons button {
+  margin: auto 5px;
+  width: 100px;
+}

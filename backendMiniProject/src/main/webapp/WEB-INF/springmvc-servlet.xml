@@ -9,18 +9,17 @@
 
 
 	<context:annotation-config />
-	<context:component-scan base-package="customer" />
+	<context:component-scan base-package="com.*" />
 
 	<!-- Controller에서 View로 연결 -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="prefix" value="/WEB-INF/view/jsp/" />
 		<!--/WEB-INF/view/customer/result.jsp -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-
 
 	<!-- DB Connection, dbcp -->
 	<bean id="dataSource"
@@ -31,14 +30,17 @@
 
 
 	<!-- myBatis -->
-	<bean id="" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation"
 			value="classpath:mybatis-config.xml" />
 		<property name="transactionFactory">
 			<bean
 				class="org.mybatis.spring.transaction.SpringManagedTransactionFactory"></bean>
-
 		</property>
 	</bean>
+
+
 </beans>
+
