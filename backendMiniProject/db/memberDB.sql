@@ -7,7 +7,11 @@ create table memberDB (
 	email varchar(16) not null,
 	birth date not null,
 	age int,
-	sex char(2)
+	sex varchar(2)
 );
 
+insert into memberDB(name, id, pw, tel, address, email, birth, age, sex) values("yoon", "yesyes", "1121", "00000000000", "Seoul", "abc@abc.com", "2020-02-20", "22", "w");
+
 select * from memberDB;
+
+drop table memberDB;

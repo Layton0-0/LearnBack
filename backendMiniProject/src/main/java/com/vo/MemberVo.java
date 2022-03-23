@@ -1,19 +1,24 @@
 package com.vo;
 
-import java.sql.Date;
-
 public class MemberVo {
-	String name;
-	String id;
-	String pw;
-	String tel;
-	String address;
-	String email;
-	Date birth;
-	int age;
-	String sex;
+	private String name;
+	private String id;
+	private String pw;
+	private String tel;
+	private String address;
+	private String email;
+	private String birth;
+	private int age;
+	private String sex;
 	
-	public MemberVo(String name, String id, String pw, String tel, String address, String email, Date birth, int age,
+	
+	
+	public MemberVo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public MemberVo(String name, String id, String pw, String tel, String address, String email, String birth, int age,
 			String sex) {
 		super();
 		this.name = name;
@@ -51,7 +56,7 @@ public class MemberVo {
 		return email;
 	}
 
-	public Date getBirth() {
+	public String getBirth() {
 		return birth;
 	}
 
@@ -87,7 +92,7 @@ public class MemberVo {
 		this.email = email;
 	}
 
-	public void setBirth(Date birth) {
+	public void setBirth(String birth) {
 		this.birth = birth;
 	}
 

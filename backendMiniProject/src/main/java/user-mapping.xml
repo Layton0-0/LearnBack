@@ -29,8 +29,10 @@
 
 	<update id="updateMember" parameterType="member">
 		update memberDB
-		set name=#{name}, id=#{id}, pw=#{pw},
-		tel=#{tel}, address=#{address}, email=#{email}, birth=#{birth},
+		set
+		name=#{name}, id=#{id}, pw=#{pw},
+		tel=#{tel}, address=#{address},
+		email=#{email}, birth=#{birth},
 		age=#{age}, sex=#{sex}
 		where id=#{id}
 	</update>

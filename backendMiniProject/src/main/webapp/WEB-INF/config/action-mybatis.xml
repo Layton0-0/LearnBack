@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+	<properties resource="jdbc.properties">
+		<property name="username" value="root" />
+		<property name="password" value="1121" />
+	</properties>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" /> <!-- JDBC 수동으로 커밋 롤백 / MANAGED(자동) -->
+			<dataSource type="POOLED">	<!-- pooled: db를 한번만 열고 닫겠다 -->
+				<property name="driver" value="${jdbc.driver}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="mybatis/user-mapping.xml" />
+	</mappers>
+</configuration>
+
+

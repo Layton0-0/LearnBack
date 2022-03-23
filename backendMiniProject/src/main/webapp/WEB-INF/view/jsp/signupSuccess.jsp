@@ -1,10 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>로그인</title>
+<title>회원가입성공</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
 <link
@@ -79,8 +83,16 @@
 		<!-- 상단 고정 내용 끝 -->
 
 		<div>
-			<h1 class="title">회원가입을 축하합니다.</h1>
-			<a href="../../index.html">처음으로</a>
+			<c:if test="${!empty signupResult}">
+	${signupResult}님의 고객정보등록이 완료 되었습니다<br>
+				<a href="/backendMiniProject/index.html">홈 화면으로 이동</a>
+			</c:if>
+
+			<c:if test="${empty signupResult}">
+	이미 존재하거나 잘못 입력하셨습니다<br>
+	다시 입력해 주세요<br>
+				<a href="signup.jsp">다시 입력</a>
+			</c:if>
 		</div>
 	</div>
 
@@ -132,28 +144,28 @@
 			var sex = $('input[name="sex"]').val();
 
 			$.ajax({
-			  method: "POST",
-			  url: "",
-			  data: {
-			    name: name,
-			    id: id,
-			    pw: pw,
-			    tel: tel,
-			    address: address,
-			    email: email,
-			    birth: birth,
-			    age: age,
-			    sex: sex,
-			  },
-			  success: function (data) {
-			    console.log(data.status);
-			    location.assign("index.html");
-			  },
-			  error: function (error) {
-			    console.log(error.status);
-			  },
+				method : "POST",
+				url : "",
+				data : {
+					name : name,
+					id : id,
+					pw : pw,
+					tel : tel,
+					address : address,
+					email : email,
+					birth : birth,
+					age : age,
+					sex : sex,
+				},
+				success : function(data) {
+					console.log(data.status);
+					location.assign("index.html");
+				},
+				error : function(error) {
+					console.log(error.status);
+				},
 			});
-			 
+
 		});
 	</script>
 </body>

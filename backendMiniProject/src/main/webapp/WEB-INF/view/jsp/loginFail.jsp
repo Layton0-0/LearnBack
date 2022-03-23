@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원가입</title>
+    <title>로그인 실패</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
@@ -26,7 +26,9 @@
         <div class="row">
           <div class="col-4">
             <a href="./index.html"
-              ><img src="${pageContext.request.contextPath}/resources/image/logov2.png" style="width: 15em"
+              ><img
+                src="${pageContext.request.contextPath}/resources/image/logov2.png"
+                style="width: 15em"
             /></a>
           </div>
           <!-- 검색 시작 -->
@@ -93,39 +95,32 @@
             </ul>
           </div>
           <div class="col-sm-2 col-md-3 login">
-            <a href="${pageContext.request.contextPath}/login.jsp">로그인</a> <a href="${pageContext.request.contextPath}/signup.jsp">회원가입</a>
+            <a href="${pageContext.request.contextPath}/login.jsp">로그인</a>
+            <a href="${pageContext.request.contextPath}/signup.jsp">회원가입</a>
           </div>
         </div>
 
         <!-- 네비게이션 바 끝 -->
       </div>
       <!-- 상단 고정 내용 끝 -->
-
-      <form
-        class="container loginForm needs-validation"
-        action="/backendMiniProject/updateUser.do"
-        method="post"
+      <div>
+        <h4>*아이디 혹은 비밀번호가 틀렸습니다.*</h4>
+        
+        <form
+        class="container needs-validation loginForm"
+        action="/backendMiniProject/memberFind.do"
+        method="post"       
         novalidate
       >
-        <h1 class="title">회원정보</h1>
+        <h1 class="title">로그인</h1>
 
-        <div class="signUp">
-          <div class="row">
-            <div class="col">
-              <label>이름</label>
-            </div>
-            <div class="col">
-              <input name="name" type="text" value="${vo.getName()}" required />
-              <div class="invalid-feedback">이름을 입력하세요.</div>
-            </div>
-          </div>
-
+        <div class="idpw">
           <div class="row">
             <div class="col">
               <label>아이디</label>
             </div>
             <div class="col">
-              <input name="id" class="col" type="text" value="${vo.getId()}" required />
+              <input name="id" class="col" type="text" required />
               <div class="invalid-feedback">아이디를 입력하세요.</div>
             </div>
           </div>
@@ -135,75 +130,18 @@
               <label>비밀번호</label>
             </div>
             <div class="col">
-              <input name="pw" type="password" value="${vo.getPw()}" required />
+              <input name="pw" type="password" required />
               <div class="invalid-feedback">비밀번호를 입력하세요.</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>전화번호</label>
-            </div>
-            <div class="col">
-              <input name="tel" type="tel" value="${vo.getTel()}" required />
-              <div class="invalid-feedback">전화번호를 입력하세요.</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>주소</label>
-            </div>
-            <div class="col">
-              <input name="address" type="text" value="${vo.getAddress()}" required />
-              <div class="invalid-feedback">주소를 입력하세요.</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>이메일</label>
-            </div>
-            <div class="col">
-              <input name="email" type="email" value="${vo.getEmail()}" required />
-              <div class="invalid-feedback">이메일을 입력하세요.</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>생년월일</label>
-            </div>
-            <div class="col">
-              <input name="birth" type="date" value="${vo.getBirth()}" required />
-              <div class="invalid-feedback">생년월일을 입력하세요.</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>나이</label>
-            </div>
-            <div class="col">
-              <input name="age" type="text" value="${vo.getAge()}" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label>성별</label>
-            </div>
-            <div class="col">
-              <input name="sex" type="text" value="${vo.getSex()}" readonly/>
             </div>
           </div>
         </div>
 
         <div class="buttons">
-          <button type="submit">수정</button>
-          <button type="reset">삭제</button>
+          <button type="submit">로그인</button>
+          <button type="reset">취소</button>
         </div>
       </form>
+      </div>
     </div>
 
     <!-- footer 시작 -->

@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -13,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" /> 
+    <link rel="stylesheet" href="resources/css/style.css" />
   </head>
 
   <body>
@@ -23,7 +24,7 @@
         <!-- 로고 및 검색 바 시작 -->
         <div class="row">
           <div class="col-4">
-            <a href="../../index.html"><img src="../image/logov2.png" style="width: 15em" /></a>
+            <a href="index.html"><img src="resources/image/logov2.png" style="width: 15em" /></a>
           </div>
           <!-- 검색 시작 -->
           <div class="col-sm-4 col-md-6 searchPart">
@@ -49,7 +50,7 @@
           <!-- 검색 끝 -->
           <div class="col mypage">
             <!-- 마이페이지 -->
-            <a href="../../view/jsp/detailUserData.jsp">
+            <a href="WEB-INF/view/jsp/detailUserData.jsp">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -62,7 +63,7 @@
               </svg>
             </a>
             <!-- 장바구니 -->
-            <a href="../../view/jsp/basket.jsp">
+            <a href="WEB-INF/view/jsp/basket.jsp">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -83,28 +84,28 @@
           <div class="col-sm-6 col-md-9 navi">
             <ul>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">BEST</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">BEST</a>
               </li>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">NEW</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">NEW</a>
               </li>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">간식</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">간식</a>
               </li>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">건강</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">건강</a>
               </li>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">패션</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">패션</a>
               </li>
               <li>
-                <a href="../../view/jsp/showProductList.jsp">기타</a>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">기타</a>
               </li>
             </ul>
           </div>
           <div class="col-sm-2 col-md-3 login">
-            <a href="login.html">로그인</a>
-            <a href="signup.html">회원가입</a>
+            <a href="login.jsp">로그인</a>
+            <a href="signup.jsp">회원가입</a>
           </div>
         </div>
 
@@ -112,7 +113,12 @@
       </div>
       <!-- 상단 고정 내용 끝 -->
 
-      <form class="container needs-validation loginForm" action="" method="get" novalidate>
+      <form
+        class="container needs-validation loginForm"
+        action="/backendMiniProject/memberFind.do"
+        method="post"       
+        novalidate
+      >
         <h1 class="title">로그인</h1>
 
         <div class="idpw">
@@ -182,7 +188,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     ></script>
-    <script type="text/javascript" src="/javascript/login.js"></script>
+    <script type="text/javascript" src="resources/javascript/login.js"></script>
     <script></script>
   </body>
 </html>

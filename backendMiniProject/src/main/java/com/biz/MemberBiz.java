@@ -34,7 +34,7 @@ public class MemberBiz {
 		return memberDao.delete(id);
 	}
 
-	public String update(MemberVo vo) {
+	public MemberVo update(MemberVo vo) {
 		return memberDao.update(vo);
 	}
 }

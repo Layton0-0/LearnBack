@@ -4,7 +4,7 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias alias="member"  type="member.vo.memberVo" />
+		<typeAlias alias="member"  type="com.vo.MemberVo" />
 	</typeAliases>
 
 	<mappers>

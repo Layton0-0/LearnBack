@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -13,7 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
   </head>
 
   <body>
@@ -23,12 +28,14 @@
         <!-- 로고 및 검색 바 시작 -->
         <div class="row">
           <div class="col-4">
-            <a href="../../index.html"><img src="../image/logov2.png" style="width: 15em" /></a>
+            <a href="index.html"><img src="resources/image/logov2.png" style="width: 15em" /></a>
           </div>
           <!-- 검색 시작 -->
           <div class="col-sm-4 col-md-6 searchPart">
-            <input class="d-xl-flex search" type="search" />
-            <button class="btn btn-light" type="button">
+            <input class="d-xl-flex search" type="search" /><button
+              class="btn btn-light"
+              type="button"
+            >
               <!-- 검색 아이콘 -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +54,7 @@
           <!-- 검색 끝 -->
           <div class="col mypage">
             <!-- 마이페이지 -->
-            <a href="../../view/jsp/detailUserData.jsp">
+            <a href="WEB-INF/view/jsp/detailUserData.jsp">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -60,7 +67,7 @@
               </svg>
             </a>
             <!-- 장바구니 -->
-            <a href="../../view/jsp/basket.jsp">
+            <a href="WEB-INF/view/jsp/basket.jsp">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -80,16 +87,29 @@
         <div class="row navbarPart">
           <div class="col-sm-6 col-md-9 navi">
             <ul>
-              <li><a href="../../WEB-INF/view/jsp/showProductList.jsp">BEST</a></li>
-              <li><a href="../../view/jsp/showProductList.jsp">NEW</a></li>
-              <li><a href="../../view/jsp/showProductList.jsp">간식</a></li>
-              <li><a href="../../view/jsp/showProductList.jsp">건강</a></li>
-              <li><a href="../../view/jsp/showProductList.jsp">패션</a></li>
-              <li><a href="../../view/jsp/showProductList.jsp">기타</a></li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">BEST</a>
+              </li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">NEW</a>
+              </li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">간식</a>
+              </li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">건강</a>
+              </li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">패션</a>
+              </li>
+              <li>
+                <a href="WEB-INF/view/jsp/showProductList.jsp">기타</a>
+              </li>
             </ul>
           </div>
           <div class="col-sm-2 col-md-3 login">
-            <a href="login.html">로그인</a> <a href="signup.html">회원가입</a>
+            <a href="login.jsp">로그인</a>
+            <a href="signup.jsp">회원가입</a>
           </div>
         </div>
 
@@ -97,7 +117,12 @@
       </div>
       <!-- 상단 고정 내용 끝 -->
 
-      <form class="container loginForm needs-validation" action="" method="post" novalidate>
+      <form
+        class="container loginForm needs-validation"
+        action="/backendMiniProject/signup.do"
+        method="post"
+        novalidate
+      >
         <h1 class="title">회원가입</h1>
 
         <div class="signUp">
@@ -176,7 +201,7 @@
               <label>나이</label>
             </div>
             <div class="col">
-              <input name="age" type="text" />
+              <input name="age" type="number" />
             </div>
           </div>
 
@@ -185,7 +210,8 @@
               <label>성별</label>
             </div>
             <div class="col">
-              <input name="sex" type="text" />
+              <label><input name="sex" type="radio" value="남자"/>남자</label>
+              <label><input name="sex" type="radio" value="여자"/>여자</label>              
             </div>
           </div>
 
@@ -233,47 +259,6 @@
     </footer>
     <!-- footer 끝 -->
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    ></script>
-    <script type="text/javascript" src="../javascript/login.js"></script>
-    <script>
-      $(".loginForm").submit(function () {
-        var name = $('input[name="name"]').val();
-        // console.log(name);
-        var id = $('input[name="id"]').val();
-        var pw = $('input[name="pw"]').val();
-        var tel = $('input[name="tel"]').val();
-        var address = $('input[name="address"]').val();
-        var email = $('input[name="email"]').val();
-        var birth = $('input[name="birth"]').val();
-        var age = $('input[name="age"]').val();
-        var sex = $('input[name="sex"]').val();
-
-        $.ajax({
-          method: "POST",
-          url: "/backendMiniProject/signup.do",
-          data: {
-            name: name,
-            id: id,
-            pw: pw,
-            tel: tel,
-            address: address,
-            email: email,
-            birth: birth,
-            age: age,
-            sex: sex,
-          },
-          success: function (data) {
-            console.log(data.status);
-            /* location.assign("/resources/html/signup.html"); */
-          },
-          error: function (error) {
-            console.log(error.status);
-          },
-        });
-      });
-    </script>
+    <script type="text/javascript" src="resources/javascript/login.js"></script>
   </body>
 </html>

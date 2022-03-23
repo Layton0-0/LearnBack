@@ -15,7 +15,7 @@ public class CustomerSearch {
 	@Autowired
 	private CustomerBiz biz;
 
-	@RequestMapping("/customerSearch.do")
+	@RequestMapping("/customerFind.do")
 	public ModelAndView search(@RequestParam("id") String id){
 		//  String id= request.getPramameter("id");		
 		CustomerVO vo1 = biz.searchCustomer(id);

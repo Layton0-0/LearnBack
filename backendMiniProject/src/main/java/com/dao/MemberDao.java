@@ -82,14 +82,10 @@ public class MemberDao {
 		return result;
 	}
 	
-	public String update(MemberVo vo) {
+	public MemberVo update(MemberVo vo) {
 		SqlSession session = factory.openSession();
-		String result = null;
 		try {
-			int r = session.update("member.updateMember", vo);
-			if(r > 0) {
-				result = vo.getId();
-			}
+			session.update("member.updateMember", vo);
 			session.commit();
 		} catch (Exception e) {
 			session.rollback();
@@ -97,6 +93,6 @@ public class MemberDao {
 		} finally {
 			session.close();
 		}
-		return result;
+		return vo;
 	}
 }

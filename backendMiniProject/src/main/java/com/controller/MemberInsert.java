@@ -3,6 +3,7 @@ package com.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,9 +18,13 @@ public class MemberInsert {
 	@Autowired
 	MemberBiz memberBiz;
 	
-	@ResponseBody	
+	@ResponseBody
 	@RequestMapping(value="/signup.do", method = RequestMethod.POST)
-	public ModelAndView signupControll(@ModelAttribute("memberVo") MemberVo vo) {
+	public ModelAndView signupControll(MemberVo vo) {
+		MemberVo voFind = memberBiz.find(vo.getId());
+		if(voFind != null) {
+			return null;
+		}
 		return new ModelAndView("signupSuccess", "signupResult", memberBiz.insert(vo));
 	}
 }
