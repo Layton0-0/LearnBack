@@ -33,6 +33,9 @@ public class MemberFind {
 	}
 
 	public ModelAndView loginSuccess(MemberVo vo) {
+		if(vo.getId().equals("admin")) {
+			return new ModelAndView("admin/addProduct");
+		}
 		return new ModelAndView("detailUserData", "vo", vo);
 	}
 

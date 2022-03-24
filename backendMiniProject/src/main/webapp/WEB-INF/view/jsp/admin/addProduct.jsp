@@ -102,35 +102,62 @@
 		</div>
 		<!-- 상단 고정 내용 끝 -->
 
-		<section class="article-list">
-			<div class="container">
-				<div class="intro">
-					<h2 class="text-start">All</h2>
-					<p class="text-start">
-					<strong>상품 목록 전체</strong> <br>
-					검색창에 원하는 상품을 검색해보세요!
-					</p>
-				</div>
-				<div class="row articles">
+		<form class="container loginForm needs-validation"
+			action="/backendMiniProject/addProduct.do" method="post" novalidate>
+			<h1 class="title">상품 등록</h1>
 
-					<c:if test="${!empty productList}">
-						<c:forEach items="${productList}" var="pl">
-							<div class="col-sm-6 col-md-4 item">
-								<a href="detailProductData"> <img class="img-fluid"
-									src="${pageContext.request.contextPath}/resources/image/none.png" />
-								</a>
-								<h3 class="name">${pl.pdName}</h3>
-								<p class="description">${pl.pdPrice}원</p>
-								<p class="description">${pl.pdStock}개</p>
-								<p class="description">${pl.pdDetail}</p>
-							</div>
-							<br>
-						</c:forEach>
-					</c:if>
-					<br>
+			<div class="signUp">
+				<div class="row">
+					<div class="col">
+						<label>상품 이름*</label>
+					</div>
+					<div class="col">
+						<input name="pdName" type="text" required />
+						<div class="invalid-feedback">상품의 이름을 입력하세요.</div>
+					</div>
 				</div>
+
+				<div class="row">
+					<div class="col">
+						<label>가격*</label>
+					</div>
+					<div class="col">
+						<input name="pdPrice" class="col" type="number" required />
+						<div class="invalid-feedback">가격을 입력하세요.</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<label>수량*</label>
+					</div>
+					<div class="col">
+						<input name="pdStock" type="number" required />
+						<div class="invalid-feedback">수량을 입력하세요.</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<label>상품 설명</label>
+					</div>
+					<div class="col">
+						<textarea rows="10" cols="50" name="pdDetail"
+							placeholder="300자 이내로 적어주세요."></textarea>
+					</div>
+				</div>
+
+
+
+				<p style="color: lightcoral; text-align: center">*이 붙은 항목은 필수
+					항목입니다.</p>
 			</div>
-		</section>
+
+			<div class="buttons">
+				<button type="submit">저장</button>
+				<button type="reset">취소</button>
+			</div>
+		</form>
 	</div>
 
 	<!-- footer 시작 -->
@@ -163,10 +190,7 @@
 		</div>
 	</footer>
 	<!-- footer 끝 -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+	<script type="text/javascript" src="resources/javascript/login.js"></script>
 </body>
 </html>

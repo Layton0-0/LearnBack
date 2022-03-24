@@ -23,9 +23,9 @@ public class MemberInsert {
 	public ModelAndView signupControll(MemberVo vo) {
 		MemberVo voFind = memberBiz.find(vo.getId());
 		if(voFind != null) {
-			return null;
+			return new ModelAndView("signupResult");
 		}
-		return new ModelAndView("signupSuccess", "signupResult", memberBiz.insert(vo));
+		return new ModelAndView("signupResult", "signupResult", memberBiz.insert(vo));
 	}
 }
 

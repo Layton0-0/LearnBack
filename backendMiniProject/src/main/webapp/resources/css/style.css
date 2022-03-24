@@ -7,6 +7,7 @@ a {
   text-decoration: none;
   color: gray;
   display: block;
+  word-break: keep-all;
 }
 a:hover {
   color: rgba(128, 128, 128, 0.726);
@@ -28,8 +29,10 @@ a:hover {
 }
 
 li {
+  box-sizing: border-box;
   list-style: none;
   padding: 0.5em;
+  width: 3em;
 }
 
 .fixTop {
@@ -41,6 +44,15 @@ li {
   border-bottom: 3px solid antiquewhite;
   /* margin-bottom: 0.2em; */
   background-color: rgba(250, 235, 215, 0.144);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, auto));
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: ". .";
+  gap: 0.3rem;
+  margin: 1em auto;
+}
+.navbarPart .login {
+  text-align: center;
 }
 
 .articles {
@@ -78,6 +90,10 @@ ul {
 .navi {
   display: flex;
   align-items: center;
+  font-size: 1rem;
+}
+.navi li {
+  float: left;
 }
 
 .searchPart {
@@ -114,14 +130,15 @@ ul {
   display: flex;
   justify-content: right;
   align-items: center;
+  text-align: center;
 }
 .login > a {
   margin: 0.3em;
   padding: 5px 8px;
-
   border: 2px solid antiquewhite;
   border-radius: 3px;
   background-color: rgb(245, 237, 226);
+  font-size: 1rem;
 }
 
 h1 {
@@ -138,11 +155,12 @@ input {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, minmax(50px, auto));
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
   grid-template-areas:
     ". title ."
     ". idpw ."
-    ". buttons .";
+    ". buttons ."
+    ". description .";
   gap: 0.3rem;
   margin: 3.5em auto;
 }

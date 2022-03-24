@@ -41,6 +41,18 @@
 		</property>
 	</bean>
 
+	<!-- 업로드 패스 설정 -->
+	<bean class="java.lang.String" id="uploadPath">
+		<constructor-arg
+			value="C:\Users\yesha\Desktop\코딩 공부\멀캠\Back\LearnBack\backendMiniProject\src\main\webapp\resources" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		id="multipartResolver">
+		<property name="maxUploadSize" value="30485760" />
+	</bean>
+
 
 </beans>
 
