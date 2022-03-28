@@ -1,0 +1,51 @@
+
+java.lang.reflect
+
+	1. 클래스의 멤버를 탐색하고 실행(메타 정보)하는 자바 표준 API이다.
+		java.lang.Class가 리턴하는 정보를
+		java.lang.reflect의 클래스로 리턴받아 메소드를 통해 정보를 탐색한다.
+		
+		ex01) 
+			Class t = Class.forName("java.util.Date");
+			java.util.Date date = new java.util.Date();
+			Class<Date> t = date.getClass();
+			이름 리턴하는 메소드
+			1-1. getName(): 정규화된 클래스 이름(FQCN)을 리턴
+			1-2. getSimpleName(): 간단 클래스 이름만 리턴
+			
+		ex02) 
+			Class<> class = Object.class;
+			class.getName(); // java.lang.Object
+			class.getSimpleName(); // Object
+			
+	2. Class가 가진 리턴형 멤버의 메소드 구분
+							public private superclass
+		getField()			  O		  X		   O
+		getDeclaredField()	  O		  O		   X
+		
+	3. class.getMethod()를 호출하게 되면 java.lang.reflect.Method 클래스로 리턴한다.
+	
+		ex) public int prn() {return 300;}
+			public int prn02(int a) {return XX * 2;}
+			Method mt = myclass.getMethod("prn", int.class);
+			// 원하는 메소드를 실행할 때 해당 인스턴스와 매개인자 값을 전달
+			Object res = mt.invoke(prn02, 2) // 300*2
+			
+			
+	URL: https://docs.oracle.com/javase/tutorial/reflect/class/classMembers.html
+	
+	4. public @interface SuppressWarnings:
+		7가지: all, deprecation, unchecked, fallthrough, path, serial, finally
+		
+		@SuppressWarnings("{deprecation _비추천, unchecked_비확인}")
+		 => !type-safe == Tiger code
+		 
+		 	static void m(List<String>... stringLists) {
+		   Object[] array = stringLists;
+		   List<Integer> tmpList = Arrays.asList(42);
+		   array[0] = tmpList; // Semantically invalid, but compiles without warnings
+		   String s = stringLists[0].get(0); // Oh no, ClassCastException at runtime!
+		 }
+		
+		
+		

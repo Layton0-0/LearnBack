@@ -1,0 +1,10 @@
+1. JDK 1.8부터 추가된 람다식 표현을 이해하고 개념을 통해 구조를 활용할 수 있다.
+
+2. 람다식에 선언된 범용함수 인터페이스를 찾아서 주요 메소드를 구현할 수 있다.
+
+3. 병렬처리를 구현할 수 있다.
+
+@Documented
+ @Retention(value=RUNTIME)
+ @Target(value=TYPE)
+public @interface FunctionalInterface
