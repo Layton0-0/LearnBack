@@ -1,0 +1,9 @@
+Lab02
+	- spring -boot 에서 제공되는 응용프로그램 빌더 및 추ㅜ가되는 서비스를 이용해서 개발자가 응용모듈을 한눈에 파악하기 위한 응용프로그램
+	
+	- TestWebApplication.java
+		CommandLineRunner: 응용프로그램 실행할 때 빌더 결과* 확인
+		*빌더 결과: 스프링 부트가 실행하면서 수행하는 작업: (springMVC 클래스 경로, 톰캣 등...)
+	- HelloControllerTest: Controller에서 이루어지는 http요청 주기 테스트 -> MockMVC를 사용
+	
+	- HelloControllerETest

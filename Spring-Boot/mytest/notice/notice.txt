@@ -1,0 +1,53 @@
+<<spring-Boot 기본 설계 >>
+
+1) 세션 레디스(Session Redis) , H2(MySQL): 세션관리 비정형, 정형 기본데이터 저장(RDB)
+
+2) spring boot web MVC: 웹 설계 구현 로직 spring-boot-starter-web
+
+3) spring boot Session Redis: 레디스(제디스: Jedis -> 자바에서 레디스를 사용할 수 있는 라이브러리)를 이용한 비정형 세션 관리
+
+4) spring boot Security / spring boot OAuth2: 회원 인증, 권한 관리
+
+5) Spring boot data Rest: Rest API
+
+6) Spring boot Batch: app을 만들면 버전관리, 백엔드 데이터 및 모듈 관리를 주기적으로 관리.
+
+7) Spring boot Data: JDBC, spring-JDBC, JPA 등
+					spring-boot-starter-data-jpa
+					spring-boot-starter-data-rest
+					spring-boot-starter-data-redis
+					spring-boot-starter-aop
+					spring-boot-starter-batch
+					
+						JPA -> Hibernate -> db server
+						H2 -> Mapper(Hibernate / MyBatis) -> / db server / 
+						Redis
+						
+						
+==================================================================================================
+디렉토리 구조
+	1) /src/main/java: 자바 소스 경로 
+			com.test.controller.MyController
+			com.test.service.MyService
+			com.test.domain.Address
+	
+	2)/src/main/resources: css, js, img 등
+					- static: 정적페이지(css, img, js)의 기본 경로
+					- templates: 서버사이드 템플릿 파일의 경로 thymeleaf, freemaker 등
+					application.properties: 포트, DB연결객체, @Value ex) server.port:80
+					application.yml(YAML) ex) server: 
+													port: 80
+					<.yml을 사용하려면 application.properties를 삭제하고 사용한다.>	
+						application-{ }.yml
+										
+	3) /src/test/java: 스프링부트 테스트 경로
+	
+	4) mvnw(maven wrapper): 배포 환경에 maven이 설치되어 있지 않더라도 프로젝트를 빌드할 수 있도록 도와주는 도구,
+		maven을 설치하지 않더라도 프로젝트에서 설정한 maven 버전으로 maven을 사용할 수 있다.
+		
+	5) mvnw,cmd: maven wrapper를 사용해 빌드하는 명령어를 저장한 cmd 파일
+	
+===========================================================================================================
+	@SpringBootApplication: @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
+	
+	

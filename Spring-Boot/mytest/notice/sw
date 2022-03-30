@@ -1,0 +1,13 @@
+1. STS 툴을 이용해서 Spring-boot를 활용해서 디렉토리 구조를 확인하고 구현할 수 있다.
+
+2. STS를 연동한 Spring-boot의 속성파일을 설정하고 구현할 수 있다.
+
+3. Spring-boot-test를 이용해서 단위모듈테스트, 어플리케이션 테스트에 대한 내용을 확인하고 bean 연동을 설정할 수 있다.
+
+- 스프링 부트의 특징 5가지
+	1. .war -> .jar
+	2. Embeded Tomcat, Jetty, UnderTow -> 독립실행
+	3. 통합스타터 메이븐 그레이들 구성 간소화(spring-boot-starter-test)
+	4. xml설정 간소화
+	5. 애플리케이션 모니터링 관리(Spring Actuator)
+	<< 자동화, 의존성, 최적화>>

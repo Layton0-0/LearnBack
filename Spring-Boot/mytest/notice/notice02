@@ -1,0 +1,32 @@
+@SpringBootApplication :  @Configuration, @EnableAutoConfiguration, @ComponentScan 을 합친 어노테이션
+Main Class 위에 사용한다.
+@Configurations  :@Bean 어노테이션을 Bean메서드에 적용해 Bean을 생성하게 하는 어노테이션. 만들어진 Bean은
+싱글톤 패턴으로 생성된다.
+@EnableAutoConfiguration  : Spring Boot의 자동 설정기능을 사용할 것임을 명시
+@ComponentScan : Main Class가 위치한 Root Package부터 이하 모든 패키지의 클래스를 검색해 @Component, @Controller, @Service, @Repository 어노테이션이 부여된 모든 클래스를 Bean으로 등록
+@Bean :Method 위에 사용하며 해당 메서드의 return objec를 bean으로 등록한다. 외부라이브러리의 객체를 bean으로 등록할 때 사용한다.
+@Component :Class 위에 사용하여 해당 클래스의 객체를 Bean으로 등록한다.
+============================================================================================
+@Controller :해당 클래스가 Controller임을 명시. 해당 클래스는  @RequestMapping, @RequestBody, @ResponseBody 어노테이션을 사용할 수 있다.
+@RequestMapping :어떤 Http Request를 처리할 것인지를 URL로 명시
+@RequestBody :Http Request Message의 Body를 변환해서 담을 argument앞에 명시, GET 메서드는 Body가 없기 때문에 사용 불가
+@ResponseBody :메서드의 Return 값을 적절히 변환한 후 Http Response Message의 Body에 담아 반환
+@Service :해당 클래스가 Service 역할을 함을 명시
+@Repository :해당 클래스가 Dao 역할을 함을 명시, SQLException을 DataAccessException으로 변환
+@Autowired :변수 또는 메서드 앞에 작성해 해당 타입에 맞는 bean을 자동으로 주입
+@Qualifier("value") :@Autowired 와 함께 사용하여 @Autowired가 알맞은 bean을 못 찾을 경우 name으로 bean을 찾도록 지정
+============================================================================================
+@Resource(name="value") :주어진 id 의 bean을 찾아서 주입
+@Value :properties 에서 값을 가져와 적용할 때 사용
+@Transactional :해당 메서드 또는 클래스의 데이터베이스 트랜잭션 처리를 Spring에게 위임
+@ServletComponentScan :Servlet Component(filter, Servlet, Listener) 를 scan하고 등록한다. 내장 웹서버를 사용하는 경우에만 동작한다.
+@ControllerAdvice :@ExceptionHandler와 함께 사용되어 예외처리클래스를 적용
+@ExceptionHandler :@ControllerAdvice와 함께 사용 되어 예외처리클래스를 적용
+@ResponseStatus :응답 상태코드를 지정할 수 있다.
+@RestController :@Controller + @ResponseBody 메서드의 반환값이 json으로 변환되어 응답바디에 담긴다.
+============================================================================================
+@Aspect :해당 클래스가 AOP의 Aspect 역할을 하게끔 만들어 준다.
+@Before :@Aspect가 적용된 클래스의 메서드에 적용. target 객체를 호출하기 전에 실행된다.
+@After :target 객체를 호출한 이후에 실행된다. target 객체가 반환하는 반환값을 전달 받을 방법은 없다.
+@AfterReturning :target 객체를 호출한 이후에 실행, target 객체가 반환하는 반환값을 파라미터로 전달 받을 수 있다.
+@AfterThrowing :target 객체를 호출한 뒤 예외가 발생할 경우 실행
