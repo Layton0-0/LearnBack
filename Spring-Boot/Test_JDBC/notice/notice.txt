@@ -1,0 +1,31 @@
+create table mUser(
+userId int(11) primary key,
+password varchar(10),
+userName varchar(10),
+age int(11),
+role varchar(10));
+
+insert into mUser values(1, '111', 'hong', 24, 'admin');
+insert into mUser values(2, '222', 'jung', 25, 'general');
+insert into mUser values(3, '333', 'park', 26, 'general');
+
+	-- db 테이블 만듭시다 -- 
+
+	1. spring jdbc + mysql
+	2. spring jpa(no sql) (조인, 집계) + my sql
+	3. jpa + mapper + mysql
+
+	==<<?>>==
+	N -> 2000/4 mongodb / k -> 2000 mongodb kafka -> hadoop, Redis / 
+	jpa -> mapper (h2) -> mongodb
+	JPA   + [ KeyValue,LDAP, MongoDB,Redis, REST] + DBServer
+	
+	==================================================================================
+	com.mydb.boot
+			model
+			controller
+			service
+			dao
+			
+			
+	[a-z]+ [A-Z]

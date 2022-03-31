@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display Employee Details</title>
+  </head>
+  <body>
+    <table border="1" style="font-size: 1.5em; width: 50%; height: 30%">
+      <tr>
+        <th>userId</th>
+        <th>password</th>
+        <th>grade</th>
+        <th>regDate</th>
+        <th>tel</th>
+      </tr>
+      <tr th:each="res : ${memberList}">
+        <td th:text="${res.userId}">userId</td>
+        <td th:text="${res.password}">password</td>
+        <td th:text="${res.grade}">grade</td>
+        <td th:text="${res.regDate}">regDate</td>
+        <td th:text="${res.tell}">tell</td>
+      </>
+    </table>
+    <strong><a href="/input">Click here</a></strong>
+  </body>
+</html>
