@@ -29,3 +29,19 @@ insert into mUser values(3, '333', 'park', 26, 'general');
 			
 			
 	[a-z]+ [A-Z]
+	
+	
+	1. MVC 패턴과 JDBC + mySQL연동을 활용할 수 있다.
+	2. Spring Boot + JPA + MySQL을 활용한 패턴을 구현할 수 있다.
+	3. Spring Boot + MyBatis + MySQL을 활용한 패턴을 구현할 수 있다.
+	4. Spring Boot + JPA(H2) + MyBatis + JDBC + MySQL, 비정형서버의 패턴을 구상할 수 있다.
+	
+	Entity 연관관계 매핑
+		방향: 
+			- 단방향: 객체 관계에서 참조형 필드를 가진 객체가 하나뿐인 경우(참조형 필드가 있는 객체에서만 다른 객체 참조 가능 has ~ a)
+			- 양방향: 객체 간의 관계에서 두 객체 모두 참조형 필드를 가진 경우 -> 서로 참조하고 있기 때문에 어디든지 참조 가능하다.
+			
+			**주의사항!! DIP(Dependency Inversion Principle): 자신보다 추상성이 높은 클래스에 의존해야한다.
+				추상이 낮은 객체가 ----------> 추상이 높은 객체에 의존
+				JPA에서는 단방향, 양방향 매핑이 모두 존재하지만 가능한 객체 간의 관계를 단방향으로 하는 것이 바람직하다.
+		다중성

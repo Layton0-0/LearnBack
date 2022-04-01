@@ -1,0 +1,25 @@
+https://docs.spring.io/spring-data/jpa/docs/current/api/
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#new-features.2-5-0
+
+<<JPA 주요 인터페이스>> MonJa(Mongo + Java)
+	장점: 생산성, 유지보수(데이터 중심 설계 -> 객체 중심 변경)
+	단점: 자바 -> 복잡한 쿼리 -> 비즈니스 로직이 복잡하거나 연산이 중첩되면 매퍼가 편하다. sql 성능평가가 복잡한 로직일 때 저하된다.
+	
+	실무자는(생산성, 유지보수)? -> JPA / mapper 고민함.
+	
+	제너릭(참조형 클래스만 가능)
+	T: Entity의 타입(도메인)
+	ID: P.K 타입
+	
+	ex) 사원테이블을 관리하는 JPA, EMP(empno[pk] -int, empname, sal, mgr, deptno)
+		Repository<T,ID> -> Repository<Emp, Integer>{}
+1) Repository<T,ID> : 쿼리문 사용
+
+2) CrudRepository<T,ID> : CRUD 전용
+
+3) JpaRepository<T,ID> : 페이징, 정렬, 탐색, 쿼리문
+
+4) PagingAndSortingRepository<T,ID> : 페이징, 정렬, 탐색
+
+5) QueryByExampleExecutor<T> : 쿼리문 전용
+
