@@ -1,0 +1,43 @@
+1. member table 작성
+
+2. MyProject 생성
+
+3. 템플릿 작성
+	- 압축을 풀어서 src/main/resources 안에 넣기
+	
+4. 속성 파일 생성
+	- application.properties
+	- messages.properties
+		-> my.domain=http://localhost:9090
+		
+5. 클래스 패키지 생성(일반, 관리자)
+	5.1) my.com -> application start code
+	[6] 5.2) my.com.admin -> 관리자 계정 영역
+	5.3) my.com.board -> 게시판
+	================================================
+	<< 공용 폴더, 공통 폴더, 전역 폴더 >> : 상수들의 집합, 핸들러(예외처리, 유효성 검사, 페이징, 메일) 등 
+	[4] 5.4) my.com.common.code
+	5.4) my.com.common.exception
+	[5] 5.4) my.com.common.intercepter
+		- AuthIntercepter.java : member, admin 나누기
+	5.4) my.com.common.mail
+	5.4) my.com.common.mail.handler
+	5.4) my.com.common.util.file
+	[7] 5.4) my.com.common.util.pagination
+	5.4) my.com.common.validator
+
+	================================================	
+	[2] 5.5) my.com.config << @Bean -> @Configuration >>
+		- AppConfig.java : 나머지 기본 환경설정 Bean
+		- WebConfig.java :  AuthInterceptor()
+							파일 업로드 관련
+	[3] 5.6) my.com.entity(domain)
+		- Member.java
+		- FileInfo.java
+		- Board.java
+	5.7) my.com.member
+	[8] 5.8) my.com.member.validator
+			- JoinForm.java
+			- JoinFormValidator
+	[1] 5.9) my.com.index.controller
+		- IndexController.java : 메인 페이지 연동

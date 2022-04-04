@@ -1,0 +1,9 @@
+1) member 테이블 확인
+
+2) Member DTO 가서 pojo 줄이기
+
+3) 각각 테스트 해보기
+
+4) 매퍼에 insert 해보기
+
+5) jpa로 변환해보기

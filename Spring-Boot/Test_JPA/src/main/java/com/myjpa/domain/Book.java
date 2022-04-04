@@ -9,8 +9,9 @@ import javax.validation.constraints.Size;
 
 import lombok.Data;
 
-@Entity
-@Data
+// @Document -> 비정형 서버로 관리 
+@Entity // -> 정형 서버로 관리
+@Data // pojo를 단순하게 구현하는 기능. set, get @Table
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
