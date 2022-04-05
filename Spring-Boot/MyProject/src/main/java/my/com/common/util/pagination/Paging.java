@@ -3,7 +3,6 @@ import lombok.Getter;
 
 @Getter
 public class Paging {
-
 	private String url; //페이징에서 링크할 url
 	private int curPage ; //현재 페이지
 	private int blockCnt; //페이지 블록당 페이지 개수

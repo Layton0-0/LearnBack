@@ -41,3 +41,14 @@
 			- JoinFormValidator
 	[1] 5.9) my.com.index.controller
 		- IndexController.java : 메인 페이지 연동
+		
+================================================================================
+Spring-Boot (Spring Framework의 문법으로 연동하면서 집약적인 라이브러리 제공)
+1. springEL(Spring Expression Language)에 대해서 웹페이지에 대한 유효성 검사에 대해 살펴보고 적용방법을 확인한다.
+	https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions
+
+2. 사용자 검증 코드 및 error, exception 코드 구문을 확인하고 적용하는 방법을 확인해보자.
+
+3. springsession 값에 관한 구문을 확인하고 적용방법을 확인한다.
+
+4. 파일 업로드 시 사용되는 라이브러리를 확인하고 각각의 클래스 및 메소드를 살펴보자.

@@ -1,0 +1,103 @@
+1. member 테이블 작성
+
+2. MyProject 생성
+   <groupId>my.com</groupId>
+	<artifactId>my.com</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MyProject</name>
+	<description>Demo project for Spring Boot</description> 
+	
+3. 템플릿 작성 
+     - 압축 풀어서 src/main/resources하위에 저장한다.
+      
+4. 속성파일 생성
+    application.properties 설정한다. 
+    messages.properties  생성 후 아래와 같이 추가한다. 
+     my.domain=http://localhost:9090  
+
+5. 클래스 패키지 생성      일반, 관리자   
+    5.1) my.com  -> application  start code
+    5.2) my.com.admin  ->관리자 계정영역 ( O)
+    5.3) my.com.board   -> 게시판
+    ====================================================
+    <<공용폴더, 공통 폴더,전역 폴더  : 상수들의 집합, 핸들러,예외처리, 유효성 검사, 페이징 ,이메일등
+    5.4) my.com.common.code (0)
+    5.4) my.com.common.exception
+    5.4) my.com.common.intercepter (o)
+                        AuthIntercepter.java :member,admin나누기  
+    5.4) my.com.common.mail
+    5.4) my.com.common.mail.handler
+    5.4) my.com.common.util.file
+    5.4) my.com.common.util.pagination (o) 
+    5.4) my.com.common.validator
+                             
+    =====================================================
+    
+    5.5) my.com.config <<@Bean -> @Configuration>>
+                      -AppConfig.java  : 나머지 기본 환경 Bean 
+                      -WebConfig.java : AuthInterceptor()
+                                        파일 업로드 관련 
+    5.6) my.com.entity(domain) O
+                       -Member.java
+                       -FileInfo.java
+                       -Board.java
+    5.7) my.com.member
+    5.8) my.com.member.validator 
+                           -JoinForm.java
+                           -JoinFormValidator    
+    5.9) my.com.index.controller(o)
+                               -indexController.java : 메인페이지 연동  
+    
+    
+    
+ =========================================================================
+ Spring-Boot (Spring-F의 문법으로 연동하면서 집약적인 라이브러리를 제공 ) 
+ 
+1. SpringEL에 대해서 웹 페이지에 대한 유효성 검사에 대해 살펴 보고
+  적용 방법을 확인 한다.   
+  
+2.사용자 검증 코드 및 Error, Exception코드 구문을 확인 하고 적용 하는 방법을 
+   확인 해보자.  
+    import org.springframework.validation.Errors;  
+     my.com.common.validator 패키지와  join.html에서 유효성 검사 구현  
+     
+     
+
+3. SpringSession값에 관한 구문을 확인하고  적용 방법을 확인 한다. 
+
+4.  파일 업로드시 사용되는 라이브러리를 확인 하고  각각의 클래스 및 메소드를 살펴 보자.  
+
+
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+   
+   
+   
+   
+   
+   
+   

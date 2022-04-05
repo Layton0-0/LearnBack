@@ -12,16 +12,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("admin")
 public class AdminMemberController {
-
+	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
-
+	
 	@Autowired
 	private AdminMemberService adminMemberService;
-
+	
 	@GetMapping("member/member-list")
-	public void searchAllMembers(Model model, @RequestParam(required = false, defaultValue = "1") int page) {
-
+	public void searchAllMembers(Model model
+					, @RequestParam(required = false, defaultValue = "1")
+					  int page) {
+		
 		model.addAllAttributes(adminMemberService.findAllMembers(page));
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

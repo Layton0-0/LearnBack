@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:component-scan base-package="com.test"/>
+ 
+	<bean id="addr01" class="com.test.Address">
+		<property name="addr" value="서울시 서초구 " />
+		<property name="tel" value="02-222-2222" />
+	</bean>
+
+<bean  id ="per01"   class ="com.test.Person">
+         <property name="name"   value ="#{addr01.tel}"/>
+         <property name="address"  value="#{addr01}"/>
+ </bean>
+ 
+ 
+ <!-- <bean  id ="per01"   class ="com.test.Person">
+         <property name="name"   value ="홍길동"/>
+         <property name="address"  ref="addr01"/>
+ </bean> -->
+ 
+  
+</beans>
+
+
+
+
+
+
