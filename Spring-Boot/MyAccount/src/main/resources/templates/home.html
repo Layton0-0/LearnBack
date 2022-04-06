@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/base.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+    <div th:replace="layout/header::header"></div>
+
+    <!--body-->
+    <div class="container">
+        <br/><br/>
+        <div class="jumbotron">
+            <h1>안녕하세요, 오늘도 팟팅!!.</h1>
+            <p>
+                Spring_Boot Account_ Board Test!
+            </p>
+            <br/>
+            <p align="right">
+                <a class="btn btn-primary btn-lg" href="/board/list">Getting Start Boot</a>
+            </p>
+        </div>
+    </div>
+    <!--/body-->
+
+    <div th:replace="layout/footer::footer"></div>
+</body>
+</html>
