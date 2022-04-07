@@ -50,3 +50,35 @@ web27 4/6 수요일  loyal-polymer-346400
 
 클아: 730451582886-g2tgpm358kucpsqq466gdhuk4fjaof0a.apps.googleusercontent.com
 클비: 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
+================================================================
+web28 4/7 목요일
+1. 네이버 클라우드 API를 살펴보고 활용하는 방법을 이해한다.
+
+2. 다양한 API를 학습하고 원리를 이해할 수 있다.
+
+3. 스프링 부트를 통해서 API를 활용할 수 있다.
+id: group5-1
+pw: 내 비밀번호
+url: https://www.ncloud.com/nsa/kdtg5
+
+제공 서비스
+
+- CLOVA Chatbot
+
+- CLOVA OCR
+
+- AI Naver API
+
+* CLOVA Face Recognition(CFR)
+
+* CLOCA Voice - Premium
+
+* CLOVA Speech Recogniton(CSR)
+
+* Pose Estimation
+
+* Object Detection
+
+* CLOVA Sentiment
+
+- API Gateway
