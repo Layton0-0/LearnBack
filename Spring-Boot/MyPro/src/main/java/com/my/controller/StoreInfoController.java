@@ -1,26 +1,52 @@
 package com.my.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.my.domain.StoreInfo;
+import com.my.service.StoreInfoService;
 
 @Controller
 public class StoreInfoController {
-	@GetMapping("/test01")
+	@Autowired
+	StoreInfoService storeInfoService;
+	
+	@GetMapping("/")
 	public String storeList(Model model) {
 		ArrayList<StoreInfo> storeInfoList = new ArrayList<>();
 		// StoreInfo storeInfo = new StoreInfo(storeCategory, storeCode, storeName,
 		// storeTel, storeAddr, storeRegDate, storeLatitude, storeLongtitude, storeTag);
-		String[] keyword = { "#±ú²ýÇÑ", "#ºÐÀ§±âÀÖ´Â", "#ÃÊ¹ä", "#ÀÌÀÚÄ«¾ß", "#½Ì½ÌÇÑ", "#½Å¼±ÇÑ" };
-		StoreInfo storeInfo = new StoreInfo("À½½ÄÁ¡>ÇÑ½Ä>À°·ù,°í±â", "B", "·Î¿ì¾Ø½½·Î¿ì", "02-793-2268", "¼­¿ï ¿ë»ê±¸ º¸±¤·Î 126",
+		String[] keyword = { "#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½", "#ï¿½Ê¹ï¿½", "#ï¿½ï¿½ï¿½ï¿½Ä«ï¿½ï¿½", "#ï¿½Ì½ï¿½ï¿½ï¿½", "#ï¿½Å¼ï¿½ï¿½ï¿½" };
+		StoreInfo storeInfo = new StoreInfo("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>ï¿½Ñ½ï¿½>ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½", "B", "ï¿½Î¿ï¿½Ø½ï¿½ï¿½Î¿ï¿½", "02-793-2268", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ê±¸ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 126",
 				"2022-04-12", 126.99421849699539, 37.53401162895581, keyword);
 		// System.out.println(storeInfo);
 		storeInfoList.add(storeInfo);
 		System.out.println(storeInfoList);
+		model.addAttribute("storeInfoList", storeInfoList);
+		return "view/Test01";
+	}
+	
+	@GetMapping("/gpstrack")
+	public String gpsTrackTest(Model model) {
+		return "view/GpsTracking";
+	}
+	
+	@GetMapping("/test02")
+	public String test02() {
+		return "view/Test02";
+	}
+	
+	@GetMapping("/test01")
+	public String returnStoreList(Model model) {
+		List<StoreInfo> storeInfoList = storeInfoService.findAll();
+		for(StoreInfo s: storeInfoList) {
+			System.out.println(s.getStoreName());
+		}
 		model.addAttribute("storeInfoList", storeInfoList);
 		return "view/Test01";
 	}

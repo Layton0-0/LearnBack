@@ -4,19 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,13 +21,17 @@ import lombok.ToString;
 @DynamicInsert
 @DynamicUpdate
 @Entity
-public class StoreInfo {
-
+public class StoreInfoJoin {
 	@Column
 	@NotNull
 	private String storeCategory;
-	
+
 	@Id
+	@GeneratedValue
+	@NotNull
+	private String storeCode;
+
+	@Column
 	@NotNull
 	private String storeName;
 
@@ -43,8 +43,16 @@ public class StoreInfo {
 	@NotNull
 	private String storeAddr;
 
-	@Column(columnDefinition = "datetime default now()")
+	@Column
 	private String storeRegdate;
+
+	@Column
+	@NotNull
+	private Double storeLatitude;
+
+	@Column
+	@NotNull
+	private Double storeLongtitude;
 	
 	@Column
 	private String storeTag;
