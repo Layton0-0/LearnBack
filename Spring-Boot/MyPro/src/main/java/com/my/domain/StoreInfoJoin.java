@@ -27,7 +27,6 @@ public class StoreInfoJoin {
 	private String storeCategory;
 
 	@Id
-	@GeneratedValue
 	@NotNull
 	private String storeCode;
 
@@ -48,11 +47,11 @@ public class StoreInfoJoin {
 
 	@Column
 	@NotNull
-	private Double storeLatitude;
+	private Long storeLatitude;
 
 	@Column
 	@NotNull
-	private Double storeLongtitude;
+	private Long storeLongitude;
 	
 	@Column
 	private String storeTag;

@@ -18,6 +18,10 @@ public class StoreInfoService{
 		return storeInfoRepository.findAll();
 	}
 	
+	public List<StoreInfo> saveAll(List<StoreInfo> list) {
+		return storeInfoRepository.saveAll(list);
+	}
+	
 	
 	
 	

@@ -238,9 +238,6 @@
 
 			  		// 키워드로 장소를 검색합니다. 첫 화면.
 			  		searchFirstPlaces();
-
-
-
 			      });
 
 			} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
@@ -248,7 +245,6 @@
 			    displayMarker(locMyPosition, message);
 			}
 
-					var storeJsonList = new Array();
 			        // 마커를 담을 배열입니다
 			    var markers = [];
 
@@ -300,11 +296,12 @@
 
 
 			        // 키워드로 장소를 검색합니다
-			        // controller에서 받아온 storeInfoList
+			        // controller에서 받아온 storeInfoJoinList
 			        /*<![CDATA[*/
-			        var storeInfoList = [[${storeInfoList}]];
-			        console.log(storeInfoList);
+			        var storeInfoJoinList = [[${storeInfoJoinList}]];
+			        console.log(storeInfoJoinList);
 			        /*]]>*/
+							var storeInfoJoinSearchList = new Array();
 
 
 			        // 키워드 검색을 요청하는 함수입니다
@@ -320,18 +317,65 @@
 			             };
 
 			          // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-			          ps.keywordSearch('술집', placesSearchCB, searchOption);
-
-			          // json 파일 만들기
-			          for(var i = 0; i < storeInfoList.length; i++){
-			          	var storeName = storeInfoList[i].storeName;
-			            //  storeName을 지정해 우리 db에 있는 애들만 뽑아서 카카오 데이터랑 비교
-			            ps.keywordSearch(storeName, giveSearchJson);
-			          }
-			          console.log(storeJsonList);
-
-
+			          ps.keywordSearch('이자카야', placesSearchCB, searchOption);
 			        }
+
+							function searchPlacesDB(defaultKeyword) {
+								var keyword = document.getElementById("keyword").value;
+								if (!keyword.replace(/^\s+|\s+$/g, "")) {
+			              // alert("키워드를 입력해주세요!");
+										keyword = defaultKeyword;
+			              return false;
+			          }
+								for(var i = 0; i < storeInfoJoinList.length; i++) {
+									// 우리 db에서 키워드를 포함한 내용이 있으면(조건) 저장.
+									if(
+										storeInfoJoinList[i].storeName.includes(keyword) ||
+										storeInfoJoinList[i].storeAddr.includes(keyword) ||
+										storeInfoJoinList[i].storeTel.includes(keyword) ||
+										storeInfoJoinList[i].storeTag.includes(keyword) ||
+										storeInfoJoinList[i].storeCategory.includes(keyword)
+										){
+										storeInfoJoinSearchList.push(storeInfoJoinList[i]);
+									}
+
+								}
+								console.log(storeInfoJoinSearchList);
+								if(storeInfoJoinSearchList === null) {
+									alert("이 주변에는 추천 술집이 없습니다! 서울의 다른 지역으로 검색해주세요!");
+								} else {
+									// 검색 목록과 마커를 표출합니다
+									displayPlaces(storeInfoJoinSearchList);
+									// 페이지 번호를 표출합니다
+									// pageAlgo(storeInfoJoinSearchList.length);
+								}
+
+							}
+
+							function pageAlgo(total, bottomSize, listSize, cursor ){
+									//total = 총 갯수
+									//bottomSize = 하단크기
+									//listSize = 화면에서 보여줄 크기
+									//cursor = 현재 나의 페이지
+
+									let totalPageSize = Math.ceil(total / listSize)  //한 화면에 보여줄 갯수에서 구한 하단 총 갯수
+
+									let firstBottomNumber = cursor - cursor % bottomSize + 1;  //하단 최초 숫자
+									let lastBottomNumber = cursor - cursor % bottomSize + bottomSize;  //하단 마지막 숫자
+
+									if(lastBottomNumber > totalPageSize) lastBottomNumber = totalPageSize  //총 갯수보다 큰 경우 방지
+
+									return {
+											firstBottomNumber,
+											lastBottomNumber,
+											totalPageSize,
+											total,
+											bottomSize,
+											listSize,
+											cursor
+									}
+							}
+
 
 			        function searchPlaces() {
 			            var keyword = document.getElementById("keyword").value;
@@ -346,15 +390,35 @@
 
 			        // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
 			        function placesSearchCB(data, status, pagination) {
+								var keyword = document.getElementById("keyword").value;
+								if (!keyword.replace(/^\s+|\s+$/g, "")) {
+			              // alert("키워드를 입력해주세요!");
+										keyword = '이자카야';
+			              return false;
+			          }
+
 			          if (status === kakao.maps.services.Status.OK) {
 			               // 우리 db에 들어있는 곳인가? 들어있으면 그 객체를 우리 db에서 불러온 데이터로 따로 저장해 displayPlaces에 넘긴다.
+									for(var i = 0; i < storeInfoJoinList.length; i++) {
+										// 우리 db에서 키워드를 포함한 내용이 있으면(조건) 저장.
+											if(
+											storeInfoJoinList[i].storeName.includes(keyword) ||
+											storeInfoJoinList[i].storeAddr.includes(keyword) ||
+											storeInfoJoinList[i].storeTel.includes(keyword) ||
+											storeInfoJoinList[i].storeTag.includes(keyword) ||
+											storeInfoJoinList[i].storeCategory.includes(keyword)
+											){
+											storeInfoJoinSearchList.push(storeInfoJoinList[i]);
+											}
+
+									}
 
 			            // 정상적으로 검색이 완료됐으면
 			            // 검색 목록과 마커를 표출합니다
-			            displayPlaces(data);
+			            displayPlaces(storeInfoJoinSearchList);
 
 			            // 검색목록 확인
-			            console.log(data);
+			            console.log(storeInfoJoinSearchList);
 
 			            // 페이지 번호를 표출합니다
 			            displayPagination(pagination);
@@ -366,31 +430,6 @@
 			            return;
 			          }
 			        }
-
-			        // 이름 검색 기반으로 Json 뽑아내는 함수
-			        function giveSearchJson(data, status, pagination) {
-
-			            if (status === kakao.maps.services.Status.OK) {
-
-			              // 검색목록 확인
-			              // console.log(data);
-
-			              for (var i = 0; i < data.length; i++) {
-			            	  for(var j = 0; j < storeInfoList.length; j++){
-			                      if ( data[i].road_address_name === storeInfoList[j].storeAddr || data[i].address_name === storeInfoList[j].storeAddr) {
-			                              this.storeJsonList.push(data[i]);
-			                            }
-			            	      }
-			                }
-
-			              // 페이지 번호를 표출합니다
-			              // displayPagination(pagination);
-			            } else if (status === kakao.maps.services.Status.ERROR) {
-			              alert("검색 결과 중 오류가 발생했습니다.");
-			              return;
-			            }
-
-			          }
 
 			        // 검색 결과 목록과 마커를 표출하는 함수입니다
 			        function displayPlaces(places) {
@@ -450,53 +489,43 @@
 
 			        // 검색결과 항목을 Element로 반환하는 함수입니다
 			        function getListItem(index, places) {
-			       	  var storeJsonList = new Array();
 			          var el = document.createElement("li"),
+								// 술집 이름 출력
 			            itemStr =
 			              '<span class="markerbg marker_' +
 			              (index + 1) +
 			              '"></span>' +
 			              '<div class="info">' +
 			              "   <h5>" +
-			              places.place_name +
+			              places.storeName +
 			              "</h5>";
 
-			          if (places.road_address_name) {
+											// 주소 출력
 			            itemStr +=
 			              "    <span>" +
-			              places.road_address_name +
-			              "</span>" +
-			              '   <span class="jibun gray">' +
-			              places.address_name +
+			              places.storeAddr +
 			              "</span>";
-			          } else {
-			            itemStr += "    <span>" + places.address_name + "</span>";
-			          }
 
-			          itemStr += '  <span class="tel">' + places.phone + "</span>";
-			          for (var i = 0; i < storeInfoList.length; i++) {
-			            if (
-			              places.place_road_address_name === storeInfoList[i].storeAddr
-			            ) {
-			            	var storeTagList = new Array();
-			              storeTagList =  storeInfoList[i].storeTag.split(",");
-			              // console.log(storeTagList);
-			              // var storeLength = storeTag.length;
-			              for(var i=0;i<storeTagList.length;i++){
-			            		itemStr += "<span>#" + storeTagList[i].trim() + " </span>";
-			              }
+											// 전화번호 출력
+			          itemStr += '  <span class="tel">' + places.storeTel + "</span>";
 
-			             	// console.log(places);
-			              storeJsonList.push(places);
-			            }
+								// 태그 출력
+			          // for (var i = 0; i < storeInfoJoinList.length; i++) {
 
-			          }
+			          //   	var storeTagList = new Array();
+			          //     storeTagList =  storeInfoJoinList[i].storeTag.split(",");
+			          //     for(var i=0;i<storeTagList.length;i++){
+			          //   		itemStr += "<span>#" + storeTagList[i].trim() + " </span>";
+			          //     }
+
+
+			          // }
+								// 끝 태그 추가
 			          itemStr += "</div>";
 
 			          el.innerHTML = itemStr;
 			          el.className = "item";
 
-			          // console.log(storeJsonList);
 			          return el;
 			        }
 
@@ -565,34 +594,22 @@
 			        // 인포윈도우에 장소명을 표시합니다
 			        function displayInfowindow(marker, places) {
 
-			          var content = '<div class="info">' + "<h5>" + places.place_name + "</h5>";
-
-			          if (places.road_address_name) {
+			          var content = '<div class="info">' + "<h5>" + places.storeName + "</h5>";
 			            content +=
 			              "<span>" +
-			              places.road_address_name +
-			              "</span><br>" +
-			              "<span>" +
-			              places.address_name +
-			              "</span><br>";
-			          } else {
-			            content += "<span>" + places.address_name + "</span><br>";
-			          }
+			              places.storeAddr +
+			              "</span><br>"
 
-			          content += "<span>" + places.phone + "</span><br>";
-			          for (var i = 0; i < storeInfoList.length; i++) {
-			            if (
-			            		places.place_road_address_name === storeInfoList[i].storeAddr
-			            ){
-			          	  var storeTagList = new Array();
-			              storeTagList =  storeInfoList[i].storeTag.split(",");
-			              // console.log(storeTagList);
-			              for(var i=0;i<storeTagList.length;i++)
-			             		content += "<span>#" + storeTagList[i].trim() + " </span>";
 
-			            }
+			          content += "<span>" + places.storeTel + "</span><br>";
+			          // for (var i = 0; i < storeInfoJoinList.length; i++) {
 
-			          }
+			          // 	  var storeTagList = new Array();
+			          //     storeTagList =  storeInfoJoinList[i].storeTag.split(",");
+			          //     for(var i=0;i<storeTagList.length;i++)
+			          //    		content += "<span>#" + storeTagList[i].trim() + " </span>";
+
+			          // }
 
 			          content += "</div>";
 

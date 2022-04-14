@@ -1,6 +1,5 @@
 package com.my.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.my.domain.Kakao;
 import com.my.domain.StoreInfo;
+import com.my.domain.StoreInfoJoin;
+import com.my.service.StoreInfoJoinService;
 import com.my.service.StoreInfoService;
 
 @Controller
@@ -16,20 +18,8 @@ public class StoreInfoController {
 	@Autowired
 	StoreInfoService storeInfoService;
 	
-	@GetMapping("/")
-	public String storeList(Model model) {
-		ArrayList<StoreInfo> storeInfoList = new ArrayList<>();
-		// StoreInfo storeInfo = new StoreInfo(storeCategory, storeCode, storeName,
-		// storeTel, storeAddr, storeRegDate, storeLatitude, storeLongtitude, storeTag);
-		String[] keyword = { "#������", "#�������ִ�", "#�ʹ�", "#����ī��", "#�̽���", "#�ż���" };
-		StoreInfo storeInfo = new StoreInfo("������>�ѽ�>����,���", "B", "�ο�ؽ��ο�", "02-793-2268", "���� ��걸 ������ 126",
-				"2022-04-12", 126.99421849699539, 37.53401162895581, keyword);
-		// System.out.println(storeInfo);
-		storeInfoList.add(storeInfo);
-		System.out.println(storeInfoList);
-		model.addAttribute("storeInfoList", storeInfoList);
-		return "view/Test01";
-	}
+	@Autowired
+	StoreInfoJoinService storeInfoJoinService;
 	
 	@GetMapping("/gpstrack")
 	public String gpsTrackTest(Model model) {
@@ -41,7 +31,7 @@ public class StoreInfoController {
 		return "view/Test02";
 	}
 	
-	@GetMapping("/test01")
+	@GetMapping("/storeList")
 	public String returnStoreList(Model model) {
 		List<StoreInfo> storeInfoList = storeInfoService.findAll();
 		for(StoreInfo s: storeInfoList) {
@@ -49,5 +39,19 @@ public class StoreInfoController {
 		}
 		model.addAttribute("storeInfoList", storeInfoList);
 		return "view/Test01";
+	}
+	
+	@GetMapping("/")
+	public String returnStoreJoinList(Model model) {
+		List<StoreInfoJoin> storeInfoJoinList = storeInfoJoinService.findAll();
+
+		model.addAttribute("storeInfoJoinList", storeInfoJoinList);
+		return "view/Test03";
+	}
+	
+	@GetMapping("/storeData")
+	public String storeDataTest(Model model) {
+		List<StoreInfoJoin> storeInfoList = storeInfoJoinService.findAll();
+		return "view/GpsTracking";
 	}
 }
