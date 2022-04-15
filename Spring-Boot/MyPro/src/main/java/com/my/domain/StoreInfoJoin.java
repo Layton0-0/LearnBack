@@ -47,11 +47,11 @@ public class StoreInfoJoin {
 
 	@Column
 	@NotNull
-	private Long storeLatitude;
+	private String storeLatitude;
 
 	@Column
 	@NotNull
-	private Long storeLongitude;
+	private String storeLongitude;
 	
 	@Column
 	private String storeTag;

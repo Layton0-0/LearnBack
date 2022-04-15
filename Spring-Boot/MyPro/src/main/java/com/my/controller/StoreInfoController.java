@@ -46,7 +46,7 @@ public class StoreInfoController {
 		List<StoreInfoJoin> storeInfoJoinList = storeInfoJoinService.findAll();
 
 		model.addAttribute("storeInfoJoinList", storeInfoJoinList);
-		return "view/Test03";
+		return "view/Test04";
 	}
 	
 	@GetMapping("/storeData")

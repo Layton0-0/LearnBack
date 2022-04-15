@@ -16,9 +16,9 @@ public class Kakao {
 	private String storeCode;
 	@NotNull
 	@Column
-	private Long x;
+	private String x;
 	@NotNull
 	@Column
-	private Long y;
+	private String y;
 
 }
